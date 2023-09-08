@@ -1,3 +1,4 @@
+import java.sql.Time;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args)
@@ -14,6 +15,15 @@ public class Main {
                 "\nI be yer trusty virtual quartermaster. " +
                 "\nReady to embark on this digital adventure? (y/n)");
     }
+    public static void wait(int secs)
+    {
+        int milis = secs*1000;
+        try {
+            Thread.sleep(milis);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
     public static void playerResponse()
     {
         Scanner scan = new Scanner(System.in);
@@ -22,6 +32,7 @@ public class Main {
         {
             case "y":
                 System.out.println("Aye, ye be ready for adventure!");
+                wait(1);
                 break;
             case "n":
                 System.out.println("Ah, a landlubber, are ye? Farewell for now!");
@@ -32,6 +43,10 @@ public class Main {
                 playerResponse();
         }
     }
+    public static void clearScreen() {
+        for (int i = 0; i < 50; ++i) System.out.println();
+    }
+
 
 
 
