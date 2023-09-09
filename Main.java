@@ -46,6 +46,27 @@ public class Main {
     public static void clearScreen() {
         for (int i = 0; i < 50; ++i) System.out.println();
     }
+    public static void encounter1()
+    {
+
+    }
+    public static void encounter2()
+    {
+
+    }
+    public static void encounter3()
+    {
+
+    }
+    public static void encounter4()
+    {
+
+    }
+    public static void encounter5()
+    {
+
+    }
+
 
 
 
