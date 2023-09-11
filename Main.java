@@ -11,7 +11,7 @@ public class Main {
     }
     public static void intro()
     {
-        System.out.println("Ahoy there fellow digital pirate! " +
+        System.out.println("\nAhoy there fellow digital pirate! " +
                 "\nWelcome aboard the \"Crimson Kraken,\" a legendary ship sailin' the internet seas. " +
                 "\nI be yer trusty virtual quartermaster. " +
                 "\nReady to embark on this digital adventure? (y/n)");
@@ -50,27 +50,36 @@ public class Main {
     }
     public static void encounter1()//email
     {
-        System.out.println("Ye be checkin' yer inbox and findin' a new missive." +
-                "\nIt be readin':\n");
-        wait(2);
-        System.out.println("Hey what's up just letting you know that there's some new stuff on pirate bay." +
-                "\nIt's pretty cool. you should check it out.");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("First, let's cast our eyes upon our electronic treasure chest and see if we've plundered any digital messages.");
+        wait(3);
+        System.out.println("Ahoy, it seems there be a fresh scroll in the inbox!");
+        wait(1);
+        System.out.println("Enter yer secret passphrase to unfurl the message, matey:");
+        String input = scan.next();
+        wait(1);
+        System.out.println("[Hey what's up just letting you know that there's some new stuff on pirate bay." +
+                "\nIt's pretty cool. you should check it out." +
+                "\nps if you get the chance could you stop by the library for me? ty.]");
+        wait(5);
+        System.out.println("\nHmm, it be lookin' like we ought to make a course for Pirate Bay." +
+                "\nBut mayhaps we should pay a visit to the library if fortune smiles upon us.");
     }
     public static void encounter2()
     {
-
+        System.out.println("placeholder text 2");
     }
     public static void encounter3()
     {
-
+        System.out.println("placeholder text 3");
     }
     public static void encounter4()
     {
-
+        System.out.println("placeholder text 4");
     }
     public static void encounter5()
     {
-
+        System.out.println("placeholder text 5");
     }
 
 
