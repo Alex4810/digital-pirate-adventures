@@ -6,6 +6,7 @@ public class Main {
         playerResponse();
         System.out.println("test");
         clearScreen();
+        encounter1();
 
     }
     public static void intro()
@@ -47,9 +48,13 @@ public class Main {
     public static void clearScreen() {
         for (int i = 0; i < 50; ++i) System.out.println();
     }
-    public static void encounter1()
+    public static void encounter1()//email
     {
-
+        System.out.println("Ye be checkin' yer inbox and findin' a new missive." +
+                "\nIt be readin':\n");
+        wait(2);
+        System.out.println("Hey what's up just letting you know that there's some new stuff on pirate bay." +
+                "\nIt's pretty cool. you should check it out.");
     }
     public static void encounter2()
     {
