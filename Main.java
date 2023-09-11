@@ -29,18 +29,19 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         String response = scan.nextLine();
         switch (response) {
-            case "y" -> {
+            case "y":
                 System.out.println("Aye, ye be ready for adventure!");
-                wait(1);
-            }
-            case "n" -> {
+                wait(3);
+                break;
+
+            case "n":
                 System.out.println("Ah, a landlubber, are ye? Farewell for now!");
                 System.exit(0);
-            }
-            default -> {
+
+            default:
                 System.out.println("Arr, I didn't quite catch that. Try 'y' for yes or 'n' for no, matey!");
                 playerResponse();
-            }
+
         }
     }
     public static void clearScreen() {
