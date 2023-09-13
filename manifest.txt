@@ -1,1 +1,1 @@
-Main-Class: digital-pirate-adventures.Main.class
+Main-Class: Documents.GitHub.digital-pirate-adventures.Main
