@@ -11,7 +11,7 @@ public class Encounter {
         System.out.println("Enter yer secret passphrase to unfurl the message, matey:");
         String input = scan.next();
         Main.wait(1);
-        System.out.println("[torrent file for that new game got released this morning." +
+        System.out.println("[Hey what's up, the torrent file for that new game got released this morning." +
                 "\nps if you get the chance could you send me the textbook for the class? ty.]");
         Main.wait(10);
         System.out.println("\nHmm, it be lookin' like we ought to make a course for The Pirate Bay." +
@@ -25,6 +25,8 @@ public class Encounter {
         Main.wait(5);
         System.out.println("Standin' at the entrance, a salty dog named Keshav ambles over, boastin' a friendly grin. \n" +
                 "He introduces himself as the guardian of this trove and extends a digital textbook to ye.");
+        Main.wait(5);
+        libraryResponse();
     }
     public static void libraryResponse(){
         Scanner scan = new Scanner(System.in);
