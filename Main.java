@@ -71,7 +71,7 @@ public class Main {
                         Encounter.library();
                         break;
                     case "2":
-                        System.out.println("\"No time to waste! Arrr, hoist the anchor! \n" +
+                        System.out.println("\"There be no time to waste! Arrr, hoist the anchor! \n" +
                                 "We'll be setting a course straight for The Pirate Bay, adventure awaits!\"\n");
                         wait(5);
                         Encounter.storm();
