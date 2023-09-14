@@ -44,7 +44,7 @@ public class Main {
 
             default:
                 System.out.println("Arr, I didn't quite catch that. Try 'y' for yes or 'n' for no, matey!");
-                playerResponse();
+                introPlayerResponse();
 
         }
     }
