@@ -59,18 +59,22 @@ public class Main {
         switch(encounter)
         {
             case 1:
-                System.out.println("Would ye like to go to the library or move on?");
+                System.out.println("1. Go to the Library (1)\n" +
+                        "2. Sail straight to Pirate Cove (2)");
                 String ans = scan.next();
                 switch (ans)
                 {
                     case "1":
-                        System.out.println("1");
+                        System.out.println("\"Aye, matey! To the Library of Digital Lore we shall sail first! \n" +
+                                "Knowledge be our treasure today!\"\n");
                         break;
                     case "2":
-                        System.out.println("2");
+                        System.out.println("\"Arrr, hoist the anchor! \n" +
+                                "We'll be setting a course straight for Pirate Bay, adventure awaits!\"\n");
                         break;
                     default:
-                        System.out.println("invalid input");
+                        System.out.println("Yarrr! Ye didn't quite get the hang of it. \n" +
+                                "Try inputting '1' to visit the Library or '2' to head to Pirate Cove.\n");
                         askNext(1);
                 }
                 break;
