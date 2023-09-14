@@ -19,13 +19,13 @@ public class Encounter {
     }
 
     public static void library() {
-
+        Main.clearScreen();
         System.out.println("Arrr! Ye find yerself at the legendary Library of Genesis, \n" +
                 "a digital treasure trove, hidden deep within the vast digital ocean.");
-        Main.wait(5);
+        Main.wait(10);
         System.out.println("Standin' at the entrance, a salty dog named Keshav ambles over, boastin' a friendly grin. \n" +
                 "He introduces himself as the guardian of this trove and extends a digital textbook to ye.");
-        Main.wait(5);
+        Main.wait(10);
         libraryResponse();
     }
     public static void libraryResponse(){
@@ -35,7 +35,7 @@ public class Encounter {
         switch(response){
             case "y":
                 System.out.println("With the enthusiasm of a scallywag findin' buried treasure, ye snatch the book. \n" +
-                        "Ye tucka it away for future plunder, knowin' full well it'll be dispatched to one of yer shipmates. \n" +
+                        "Ye tuck it away for future plunder, knowin' full well it'll be dispatched to one of yer shipmates. \n" +
                         "With booty in hand, ye press on with yer grand adventure.");
                 Main.wait(5);
                 storm();
