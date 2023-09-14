@@ -9,6 +9,7 @@ public class Main {
         System.out.println("test");
         clearScreen();
         Encounter.email();
+        askNext(1);
 
 
     }
@@ -58,7 +59,20 @@ public class Main {
         switch(encounter)
         {
             case 1:
-                System.out.println("encounter 1");
+                System.out.println("Would ye like to go to the library or move on?");
+                String ans = scan.next();
+                switch (ans)
+                {
+                    case "1":
+                        System.out.println("1");
+                        break;
+                    case "2":
+                        System.out.println("2");
+                        break;
+                    default:
+                        System.out.println("invalid input");
+                        askNext(1);
+                }
                 break;
             case 2:
                 System.out.println("encounter 2");
