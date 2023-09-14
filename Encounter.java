@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class Encounter {
     public static void email()//email
@@ -38,13 +39,13 @@ public class Encounter {
                         "Ye tuck it away for future plunder, knowin' full well it'll be dispatched to one of yer shipmates. \n" +
                         "With booty in hand, ye press on with yer grand adventure.");
                 Main.wait(5);
-                storm();
+                stormIntro();
                 break;
             case "n":
                 System.out.println("With a polite but firm refusal, ye steer clear of the offer, \n" +
                         "continuin' yer escapade, a hearty 'no thanks' ringin' from yer lips.");
                 Main.wait(5);
-                storm();
+                stormIntro();
                 break;
             default:
                 System.out.println("Arrr! Ye seem to be confusin' yer compass. \n" +
@@ -55,9 +56,43 @@ public class Encounter {
 
     }
 
-    public static void storm(){
-        System.out.println("Storm");
+    public static void stormIntro(){
+        Main.clearScreen();
+        Main.wait(2);
+        System.out.println("Ye be sailin' onward, but a fearsome Bitstorm be upon us! \n" +
+                "We'll need to muster all our courage and wit to navigate this tempest, \n" +
+                "but I've no doubt we'll emerge triumphant on the other side, matey!");
+
+        stormLightning();
+        stormWhirlwind();
+        stormEruption();
+        stormWave();
+        stormCurrent();
+    }
+
+    public static void stormLightning(){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("The skies 'round ye turn as dark as a coder's soul. \n" +
+                "A taste of metal fills yer mouth, and the scent o' ozone stings yer nose. \n" +
+                "The ship's deck quivers as metal objects begin to vibrate.");
+        System.out.println("A Data Surge Lightning Strike be on the horizon! What be yer course, captain? (1/2/3):");
+        System.out.println("1. Ready the VPN defenses! We'll shield the ship and face this lightning head-on!\n" +
+                "2. Quick as a flash, execute a maneuver to dodge the strike and keep us safe.\n" +
+                "3. Brave the storm and sail straight, though it risks harm to our ship, we'll not be swayed!");
+        String input = scan.next();
 
     }
+    public static void stormWhirlwind(){
+    }
+    public static void stormEruption(){
+
+    }
+    public static void stormWave(){
+
+    }
+    public static void stormCurrent(){
+
+    }
+
 
 }
