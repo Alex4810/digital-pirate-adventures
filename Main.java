@@ -1,5 +1,3 @@
-package /Users/alexander/Documents/GitHub/digital-pirate-adventures/Main.java;
-
 import java.util.Scanner;
 
 
