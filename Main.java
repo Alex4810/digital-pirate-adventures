@@ -60,21 +60,26 @@ public class Main {
         {
             case 1:
                 System.out.println("1. Go to the Library (1)\n" +
-                        "2. Sail straight to Pirate Cove (2)");
+                        "2. Sail straight to The Pirate Bay (2)");
                 String ans = scan.next();
                 switch (ans)
                 {
                     case "1":
-                        System.out.println("\"Aye, matey! To the Library of Digital Lore we shall sail first! \n" +
+                        System.out.println("\"Aye, matey! To the Library of Genesis we shall sail first! \n" +
                                 "Knowledge be our treasure today!\"\n");
+                        wait(5);
+                        Encounter.library();
                         break;
                     case "2":
                         System.out.println("\"Arrr, hoist the anchor! \n" +
-                                "We'll be setting a course straight for Pirate Bay, adventure awaits!\"\n");
+                                "We'll be setting a course straight for The Pirate Bay, adventure awaits!\"\n");
+                        wait(5);
+                        Encounter.storm();
                         break;
                     default:
                         System.out.println("Yarrr! Ye didn't quite get the hang of it. \n" +
-                                "Try inputting '1' to visit the Library or '2' to head to Pirate Cove.\n");
+                                "Try inputting '1' to visit the Library or '2' to head to The Pirate Bay.\n");
+                        wait(5);
                         askNext(1);
                 }
                 break;

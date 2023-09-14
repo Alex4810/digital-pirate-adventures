@@ -13,11 +13,21 @@ public class Encounter {
         System.out.println("Enter yer secret passphrase to unfurl the message, matey:");
         String input = scan.next();
         Main.wait(1);
-        System.out.println("[Hey what's up just letting you know that there's some new stuff on pirate bay." +
-                "\nIt's pretty cool. you should check it out." +
+        System.out.println("[torrent file for that new game got released this morning." +
                 "\nps if you get the chance could you send me the textbook for the class? ty.]");
         Main.wait(10);
-        System.out.println("\nHmm, it be lookin' like we ought to make a course for Pirate Bay." +
+        System.out.println("\nHmm, it be lookin' like we ought to make a course for The Pirate Bay." +
                 "\nBut mayhaps we should pay a visit to the library if fortune smiles upon us.");
     }
+
+    public static void library(){
+        System.out.println("library");
+
+    }
+
+    public static void storm(){
+        System.out.println("Storm");
+
+    }
+
 }
