@@ -1,7 +1,10 @@
 import java.util.Scanner;
-import java.lang.Math;
+import java.util.Random;
 
 public class Encounter {
+
+    private static Random roll = new Random();
+
     public static void email()//email
     {
         Scanner scan = new Scanner(System.in);
@@ -77,9 +80,11 @@ public class Encounter {
                 "The ship's deck quivers as metal objects begin to vibrate.");
         System.out.println("A Data Surge Lightning Strike be on the horizon! What be yer course, captain? (1/2/3):");
         System.out.println("1. Ready the VPN defenses! We'll shield the ship and face this lightning head-on!\n" +
-                "2. Quick as a flash, execute a maneuver to dodge the strike and keep us safe.\n" +
-                "3. Brave the storm and sail straight, though it risks harm to our ship, we'll not be swayed!");
+                           "2. Quick as a flash, execute a maneuver to dodge the strike and keep us safe.\n" +
+                           "3. Brave the storm and sail straight, though it risks harm to our ship, we'll not be swayed!");
         String input = scan.next();
+        String
+
 
     }
     public static void stormWhirlwind(){
@@ -91,6 +96,33 @@ public class Encounter {
 
     }
     public static void stormCurrent(){
+
+    }
+
+    public static void stormRoll(int type){
+        switch(type)    {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+        }
+    }
+
+    public static void privateerIntro()
+    {
+
+    }
+    public static void privateerFight()
+    {
+
+    }
+    public static void scoreCheck(){
 
     }
 
