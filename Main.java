@@ -10,7 +10,7 @@ public class Main {
         clearScreen();
         Encounter.email();
         askNext(1);
-
+        Encounter.privateerIntro();
 
     }
     public static void intro()
@@ -79,22 +79,8 @@ public class Main {
                     default:
                         System.out.println("Yarrr! Ye didn't quite get the hang of it. \n" +
                                 "Try inputting '1' to visit the Library or '2' to head to The Pirate Bay.\n");
-                        wait(5);
                         askNext(1);
                 }
-                break;
-            case 2:
-                System.out.println("encounter 2");
-                break;
-            case 3:
-                System.out.println("encounter 3");
-                break;
-            case 4:
-                System.out.println("encounter 4");
-                break;
-            case 5:
-                System.out.println("encounter 5");
-                break;
         }
     }
 
