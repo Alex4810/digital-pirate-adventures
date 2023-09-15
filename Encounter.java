@@ -3,11 +3,11 @@ import java.util.Random;
 
 public class Encounter {
 
-    private static Random roll = new Random();
+    private static final Random roll = new Random();
+    private static final Scanner scan = new Scanner(System.in);
 
     public static void email()//email
     {
-        Scanner scan = new Scanner(System.in);
         System.out.println("First, let's cast our eyes upon our electronic treasure chest and see if we've plundered any digital messages.");
         Main.wait(5);
         System.out.println("Ahoy, it seems there be a fresh scroll in the inbox!");
@@ -33,7 +33,6 @@ public class Encounter {
         libraryResponse();
     }
     public static void libraryResponse(){
-        Scanner scan = new Scanner(System.in);
         System.out.println("Be ye claimin' this tome, matey?(y/n)");
         String response = scan.next();
         switch(response){
@@ -74,36 +73,93 @@ public class Encounter {
     }
 
     public static void stormLightning(){
-        Scanner scan = new Scanner(System.in);
         System.out.println("The skies 'round ye turn as dark as a coder's soul. \n" +
                 "A taste of metal fills yer mouth, and the scent o' ozone stings yer nose. \n" +
                 "The ship's deck quivers as metal objects begin to vibrate.");
         System.out.println("A Data Surge Lightning Strike be on the horizon! What be yer course, captain? (1/2/3):");
+
         System.out.println("1. Ready the VPN defenses! We'll shield the ship and face this lightning head-on!\n" +
                            "2. Quick as a flash, execute a maneuver to dodge the strike and keep us safe.\n" +
                            "3. Brave the storm and sail straight, though it risks harm to our ship, we'll not be swayed!");
+
         String input = scan.next();
         switch (input)
         {
-            case 1:
+            case "1":
                 stormRoll(1, 1);
                 break;
-            case 2:
+            case "2":
+                stormRoll(1,2);
                 break;
-            case 3:
+            case "3":
+                stormRoll(1,3);
                 break;
             default:
-                System.out.println();
+                System.out.println("Ye hesitated too long, and the storm's fury be takin' its toll. \n" +
+                        "Lightning strikes the ship, causin' damage! \n" +
+                        "Act swiftly, lest the tempest consumes us!");
                 break;
         }
-
-
-
+        stormWhirlwind();
     }
     public static void stormWhirlwind(){
+        System.out.println("The lightning strike be but a memory, and they say lightning don't strike the same spot twice. \n" +
+                "Ye be prayin' that be true as ye forge ahead into the heart of the Bitstorm. \n" +
+                "All of a sudden, the winds be howlin', and a data debris whirlwind be upon us! \n" +
+                "What be our course, captain? (1/2/3)");
+
+        System.out.println("1. Ready the swivel gun! We'll give that whirlwind a taste o' digital lead to clear our path.\n" +
+                           "2. Steady as she goes, we'll navigate with caution through the whirlwind, takin' it slow but riskin' delays.\n" +
+                           "3. Put our brains to work and analyze the data patterns within the whirlwind for a potential shortcut.");
+
+        String input = scan.next();
+        switch (input)
+        {
+            case "1":
+                stormRoll(2, 1);
+                break;
+            case "2":
+                stormRoll(2,2);
+                break;
+            case "3":
+                stormRoll(2,3);
+                break;
+            default:
+                System.out.println("Yer moment o' hesitation be costly, matey! \n" +
+                        "The whirlwind's fury damages the ship! \n" +
+                        "Act swiftly, lest the tempest consumes us!");
+                break;
+        }
+        stormEruption();
     }
     public static void stormEruption(){
+        System.out.println("With the whirlwind dissipated, a sense o' relief washes over ye, but ye know rest be not yet within reach! \n" +
+                "From the depths of Davey Jones' locker, a deep rumbling sound echoes—a firewall eruption be upon us! \n" +
+                "What be yer orders, captain? (1/2/3))");
 
+        System.out.println("1. Search the digital depths for a weakness or a temporary opening in the firewall to pass through." +
+                "2. Ready the DDOS cannon, matey! We'll blast through that firewall and carve a path for our ship." +
+                "3. Exercise patience, me heartie! Wait for the firewall to dissipate naturally, savin' our resources but takin' the risk of delay.");
+
+        String input = scan.next();
+        switch (input)
+        {
+            case "1":
+                stormRoll(3, 1);
+                break;
+            case "2":
+                stormRoll(3,2);
+                break;
+            case "3":
+                stormRoll(3,3);
+                break;
+            default:
+                System.out.println("Ye waited too long, and the firewall's grip be upon us! \n" +
+                        "Our ship's stalled and wasted its precious bandwidth!" +
+                        "Act swiftly, lest the tempest consumes us!");
+                break;
+        }
+        stormWave();
     }
     public static void stormWave(){
 
@@ -115,20 +171,37 @@ public class Encounter {
     public static void stormRoll(int type, int input){
         switch(type)    {
             case 1:
-                int storm = roll.nextInt()+1;
-                if(input == storm)  {
-                    System.out.println("Our defenses held strong, and the lightning be naught but a spark! \n" +
-                            "Onward we sail, unharmed and undeterred!");
-                }
-                else
-                {
+                int storm1 = roll.nextInt(3)+1;
+                if(input == storm1)  {
                     System.out.println("Alas! The lightning strikes true, and we've taken damage, \n" +
                             "but our spirit be unbreakable! We press on, aye!");
                 }
+                else
+                {
+                    System.out.println("Our defenses held strong, and the lightning be naught but a spark! \n " +
+                            "Onward we sail, unharmed and undeterred!");
+                }
                 break;
             case 2:
+                int storm2 = roll.nextInt(3)+1;
+                if(input == storm2)  {
+                    System.out.println("The data debris be strikin' the ship, causin' damage! \n" +
+                            "But we'll not let it break our spirit, and we press on with the wind in our sails!");
+                }
+                else
+                {
+                    System.out.println("We've maneuvered skillfully, avoidin' the whirlwind's wrath, and our journey continues, unscathed!");
+                }
                 break;
             case 3:
+                int storm3 = roll.nextInt(3)+1;
+                if(input == storm3) {
+                    System.out.println("By Neptune's beard! The firewall's holdin' firm, and we must try again later. \n" +
+                            "Our ship stalls, burnin' precious bandwidth!");
+                }
+                else    {
+                    System.out.println("Aye, the ship slipped through unscathed, and we sail onward!");
+                }
                 break;
             case 4:
                 break;
