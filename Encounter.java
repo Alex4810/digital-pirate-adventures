@@ -40,13 +40,13 @@ public class Encounter {
                 System.out.println("With the enthusiasm of a scallywag findin' buried treasure, ye snatch the book. \n" +
                         "Ye tuck it away for future plunder, knowin' full well it'll be dispatched to one of yer shipmates. \n" +
                         "With booty in hand, ye press on with yer grand adventure.");
-                Main.wait(10);
+                Main.wait(15);
                 stormIntro();
                 break;
             case "n":
                 System.out.println("With a polite but firm refusal, ye steer clear of the offer, \n" +
                         "continuin' yer escapade, a hearty 'no thanks' ringin' from yer lips.");
-                Main.wait(5);
+                Main.wait(15);
                 stormIntro();
                 break;
             default:
@@ -139,8 +139,8 @@ public class Encounter {
 
         System.out.println("What be yer orders, captain? (1/2/3))");
 
-        System.out.println("1. Search the digital depths for a weakness or a temporary opening in the firewall to pass through." +
-                "2. Ready the DDOS cannon, matey! We'll blast through that firewall and carve a path for our ship." +
+        System.out.println("1. Search the digital depths for a weakness or a temporary opening in the firewall to pass through.\n" +
+                "2. Ready the DDOS cannon, matey! We'll blast through that firewall and carve a path for our ship.\n" +
                 "3. Exercise patience, me heartie! Wait for the firewall to dissipate naturally, savin' our resources but takin' the risk of delay.\n");
 
         String input = scan.next();
