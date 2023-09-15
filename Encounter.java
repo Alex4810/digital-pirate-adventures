@@ -83,7 +83,20 @@ public class Encounter {
                            "2. Quick as a flash, execute a maneuver to dodge the strike and keep us safe.\n" +
                            "3. Brave the storm and sail straight, though it risks harm to our ship, we'll not be swayed!");
         String input = scan.next();
-        String
+        switch (input)
+        {
+            case 1:
+                stormRoll(1, 1);
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            default:
+                System.out.println();
+                break;
+        }
+
 
 
     }
@@ -99,9 +112,19 @@ public class Encounter {
 
     }
 
-    public static void stormRoll(int type){
+    public static void stormRoll(int type, int input){
         switch(type)    {
             case 1:
+                int storm = roll.nextInt()+1;
+                if(input == storm)  {
+                    System.out.println("Our defenses held strong, and the lightning be naught but a spark! \n" +
+                            "Onward we sail, unharmed and undeterred!");
+                }
+                else
+                {
+                    System.out.println("Alas! The lightning strikes true, and we've taken damage, \n" +
+                            "but our spirit be unbreakable! We press on, aye!");
+                }
                 break;
             case 2:
                 break;
