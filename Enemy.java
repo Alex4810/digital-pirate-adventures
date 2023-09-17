@@ -1,5 +1,10 @@
 public class Enemy {
 
+
+    public static void turn()   {
+
+    }
+
     public static void attack1()    {
         //IP-ban broadside
 
