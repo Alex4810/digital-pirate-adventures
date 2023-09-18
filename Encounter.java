@@ -254,10 +254,24 @@ public class Encounter {
     public static void privateerIntro()
     {
         Main.clearScreen();
-        System.out.println("privateer intro");
+        System.out.println("With the Bitstorm finally behind us, the air clears, and we find ourselves bathed in the calm after the digital tempest. \n" +
+                "The ship sails steadily as we breathe a sigh of relief, believin' the worst to be behind us. \n" +
+                "Little did we know, me hearties, that the high binary seas still held a twist of fate in store.\n");
+
+        Main.wait(15);
+
+        System.out.println("As we basked in a false sense of security, a shadow slowly grew on the digital horizon—a looming menace, darker than the blackest night. \n" +
+                "'Twas an enemy privateer, sailin' the same binary seas as us! \n" +
+                "The air crackles with tension as the privateer's vessel draws near, unfurlin' its ominous flag. \n" +
+                "We've found ourselves in a showdown on the digital waves, and the stakes be higher than ever! Stand ready, me hearties, for the clash of digital swords and bytes draws nigh!");
     }
+
     public static void privateerFight()
     {
+        Enemy privateer = new Enemy();
+        Ship pirate = new Ship();
+
+
 
     }
     public static void scoreCheck(){
