@@ -5,9 +5,7 @@ public class Enemy {
     public int score = 0;
 
 
-    public static void turn()   {
 
-    }
 
     public static void attack1()    {
         //firewall broadside
