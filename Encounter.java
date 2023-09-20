@@ -268,13 +268,20 @@ public class Encounter {
 
     public static void privateerFight()
     {
-        Enemy privateer = new Enemy();
-        Ship pirate = new Ship();
+        Ship.turn();
+        Enemy.turn();
 
 
+        scoreCheck();
 
     }
     public static void scoreCheck(){
+        if(Ship.score>Enemy.score+1)  {
+            System.out.println("win");
+        }
+        else {
+            privateerFight();
+        }
 
     }
 
