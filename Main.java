@@ -10,8 +10,6 @@ public class Main {
         clearScreen();
         Encounter.email();
         askNext();
-        Encounter.privateerIntro();
-        Encounter.privateerFight();
 
     }
     public static void intro()

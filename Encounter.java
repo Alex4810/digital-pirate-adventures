@@ -65,17 +65,17 @@ public class Encounter {
                 "We'll need to muster all our courage and wit to navigate this tempest, \n" +
                 "but I've no doubt we'll emerge triumphant on the other side, matey!\n");
         Main.wait(15);
-
         stormLightning();
     }
 
     public static void stormLightning(){
+        Main.clearScreen();
         System.out.println("The skies 'round ye turn as dark as a coder's soul. \n" +
                 "A taste of metal fills yer mouth, and the scent o' ozone stings yer nose. \n" +
                 "The ship's deck quivers as metal objects begin to vibrate.\n");
 
         Main.wait(10);
-        System.out.println("A Data Surge Lightning Strike be on the horizon! What be yer course, captain? (1/2/3):");
+        System.out.println("A Data Surge Lightning Strike be on the horizon! What be yer course, captain? (1/2/3):\n");
 
         System.out.println("1. Ready the VPN defenses! We'll shield the ship and face this lightning head-on!\n" +
                            "2. Quick as a flash, execute a maneuver to dodge the strike and keep us safe.\n" +
@@ -99,14 +99,16 @@ public class Encounter {
                         "Act swiftly, lest the tempest consumes us!\n");
                 break;
         }
+        Main.wait(5);
         stormWhirlwind();
     }
     public static void stormWhirlwind(){
+        Main.clearScreen();
         System.out.println("The lightning strike be but a memory, and they say lightning don't strike the same spot twice. \n" +
                 "Ye be prayin' that be true as ye forge ahead into the heart of the Bitstorm. \n" +
                 "All of a sudden, the winds be howlin', and a data debris whirlwind be upon us!\n");
         Main.wait(10);
-                System.out.println("What be our course, captain? (1/2/3)");
+                System.out.println("What be our course, captain? (1/2/3)\n");
 
         System.out.println("1. Ready the swivel gun! We'll give that whirlwind a taste o' digital lead to clear our path.\n" +
                            "2. Steady as she goes, we'll navigate with caution through the whirlwind, takin' it slow but riskin' delays.\n" +
@@ -130,14 +132,16 @@ public class Encounter {
                         "Act swiftly, lest the tempest consumes us!\n");
                 break;
         }
+        Main.wait(5);
         stormEruption();
     }
     public static void stormEruption(){
+        Main.clearScreen();
         System.out.println("With the whirlwind dissipated, a sense o' relief washes over ye, but ye know rest be not yet within reach! \n" +
                 "From the depths of Davey Jones' locker, a deep rumbling sound echoes — a firewall eruption be upon us!\n");
         Main.wait(10);
 
-        System.out.println("What be yer orders, captain? (1/2/3))");
+        System.out.println("What be yer orders, captain? (1/2/3))\n");
 
         System.out.println("1. Search the digital depths for a weakness or a temporary opening in the firewall to pass through.\n" +
                 "2. Ready the DDOS cannon, matey! We'll blast through that firewall and carve a path for our ship.\n" +
@@ -161,14 +165,16 @@ public class Encounter {
                         "Act swiftly, lest the tempest consumes us!\n");
                 break;
         }
+        Main.wait(5);
         stormWave();
     }
     public static void stormWave(){
+        Main.clearScreen();
         System.out.println("With the firewall behind us, it seems we be approachin' the end of the storm. \n" +
                 "But rest be not yet ours, for lo and behold, a grey beard approaches! \n");
         Main.wait(10);
 
-        System.out.println("'Tis a data packet wave, me heartie! What be yer orders, captain? (1/2/3)");
+        System.out.println("'Tis a data packet wave, me heartie! What be yer orders, captain? (1/2/3)\n");
 
         System.out.println("1. Ready the encryption measures!! We'll raise a protective shield against the oncomin' packet wave.");
         System.out.println("2. Steer the ship with skill and precision! We'll ride the wave to gain a temporary speed boost!");
@@ -192,13 +198,17 @@ public class Encounter {
                         "Act swiftly, lest the tempest consumes us!\n");
                 break;
         }
+        Main.wait(5);
         stormEnd();
+        Main.wait(10);
+        privateerIntro();
 
 
     }
 
 
     public static void stormEnd()   {
+        Main.clearScreen();
         System.out.println("With the Bitstorm behind us, we set our course forward, onward to new digital horizons! \n" +
                 "The high binary seas await, and there be adventures yet to come, me heartie!\n");
         Main.wait(10);
@@ -263,7 +273,11 @@ public class Encounter {
         System.out.println("As we basked in a false sense of security, a shadow slowly grew on the digital horizon—a looming menace, darker than the blackest night. \n" +
                 "'Twas an enemy privateer, sailin' the same binary seas as us! \n" +
                 "The air crackles with tension as the privateer's vessel draws near, unfurlin' its ominous flag. \n" +
-                "We've found ourselves in a showdown on the digital waves, and the stakes be higher than ever! Stand ready, me hearties, for the clash of digital swords and bytes draws nigh!");
+                "We've found ourselves in a showdown on the digital waves, and the stakes be higher than ever! Stand ready, me hearties, for the clash of digital swords and bytes draws nigh!\n");
+        Main.wait(15);
+        Main.clearScreen();
+        score = 0;
+        privateerFight();
     }
 
 
@@ -274,8 +288,8 @@ public class Encounter {
         Enemy.turn();
 
         int combination = (Ship.attack*10 + Enemy.attack);
-
-        switch(combination)   {
+        switch(combination)
+        {
             case 11:
                 System.out.println("Arrr! Our DDOS broadside be overwhelmin' their pitiful firewall broadside afore they get a chance to fire!");
                 score ++;
@@ -309,14 +323,17 @@ public class Encounter {
                 System.out.println("Our logic bomb disrupts their ability to fire a data snare chainshot. Take that, ye scallywags!");
                 score ++;
                 break;
+            default:
+                System.out.println("this shouldn't be happening. score: " + combination );
+                break;
 
-    }
+        }
         scoreCheck();
 
     }
     public static void scoreCheck(){
         if(score > 1)  {
-            System.out.println("win");
+            System.out.println("\n\n-----you're winner-----\n\n");
         }
         else {
             privateerFight();

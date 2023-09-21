@@ -8,17 +8,17 @@ public class Enemy {
 
     public static void attack1()    {
         //firewall broadside
-        System.out.println("\"Their cannons be ablaze with fiery fury as they prepare to scorch the digital seas with a Firewall Broadside!\"");
+        System.out.println("Their cannons be ablaze with fiery fury as they prepare to scorch the digital seas with a Firewall Broadside!\n");
         attack = 1;
     }
     public static void attack2()    {
         //ip tracker swivel gun
-        System.out.println("The enemy takes aim and fires their IP Tracker Swivel Gun, the digital crosshairs locked on our ship like a vengeful kraken!");
+        System.out.println("The enemy takes aim and fires their IP Tracker Swivel Gun, the digital crosshairs locked on our ship like a vengeful kraken!\n");
         attack = 2;
     }
     public static void attack3()    {
         //data snare chainshot
-        System.out.println("The enemy sets loose their Data Snare Chainshot, aiming to shred our sails and leave us driftin' in the digital abyss!");
+        System.out.println("The enemy sets loose their Data Snare Chainshot, aiming to shred our sails and leave us driftin' in the digital abyss!\n");
         attack = 3;
     }
 
