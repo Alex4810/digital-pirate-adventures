@@ -270,10 +270,9 @@ public class Encounter {
 
         Main.wait(15);
 
-        System.out.println("As we basked in a false sense of security, a shadow slowly grew on the digital horizon—a looming menace, darker than the blackest night. \n" +
-                "'Twas an enemy privateer, sailin' the same binary seas as us! \n" +
-                "The air crackles with tension as the privateer's vessel draws near, unfurlin' its ominous flag. \n" +
-                "We've found ourselves in a showdown on the digital waves, and the stakes be higher than ever! Stand ready, me hearties, for the clash of digital swords and bytes draws nigh!\n");
+        System.out.println("As we sail these digital seas, a shadow looms—the ominous 'FBI' privateer, relentless in their pursuit of digital buccaneers like us. \n" +
+                "Defeat could mean a digital brig and a life behind bars for our digital transgressions. \n" +
+                "Stand ready, me hearties, for the clash of digital swords and bytes draws nigh!\n");
         Main.wait(15);
         Main.clearScreen();
         score = 0;
@@ -293,35 +292,44 @@ public class Encounter {
             case 11:
                 System.out.println("Arrr! Our DDOS broadside be overwhelmin' their pitiful firewall broadside afore they get a chance to fire!");
                 score ++;
+                Main.wait(5);
                 break;
             case 12:
                 System.out.println("Our DDOS broadside misses, but so does their swivel gun! A standoff, it be!");
+                Main.wait(5);
                 break;
             case 13:
                 System.out.println("Our DDOS broadside misses, but their data snare chainshot be hittin' our ship! Brace yerselves, me hearties!");
                 score --;
+                Main.wait(5);
                 break;
             case 21:
                 System.out.println("Our VPN be activated, but it don't be hidin' us from their fiery firewall broadside. We be takin' a hit!");
                 score --;
+                Main.wait(5);
                 break;
             case 22:
                 System.out.println("Arrr! Our VPN be a lifesaver! We be hidin' our IP and evadin' their swivel gun shot with finesse!");
                 score ++;
+                Main.wait(5);
                 break;
             case 23:
                 System.out.println("Our VPN activates, but it be havin' no effect. Lucky for us, their data snare chainshot also be missin' the mark.");
+                Main.wait(5);
                 break;
             case 31:
                 System.out.println("Our swivel gun misses, but their firewall broadside be as aimless as a drunken sailor!");
+                Main.wait(5);
                 break;
             case 32:
                 System.out.println("The enemy's IP-tracker swivel gun hits us first, and it disables our attack. Blast it all!");
                 score --;
+                Main.wait(5);
                 break;
             case 33:
                 System.out.println("Our logic bomb disrupts their ability to fire a data snare chainshot. Take that, ye scallywags!");
                 score ++;
+                Main.wait(5);
                 break;
             default:
                 System.out.println("[bug check] combination: " + combination );
@@ -332,7 +340,11 @@ public class Encounter {
 
     }
     public static void scoreCheck(){
-        if(score > 1)  {
+        if(score < 0)
+        {
+            score = 0;
+        }
+        else if(score > 1)  {
             System.out.println("\n\n-----you're winner-----\n\n");
         }
         else {
