@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args)
     {
+        Encounter.privateerIntro();
+
         intro();
         introPlayerResponse();
         System.out.println("test");

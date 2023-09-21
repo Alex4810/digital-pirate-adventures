@@ -287,7 +287,7 @@ public class Encounter {
         Ship.turn();
         Enemy.turn();
 
-        int combination = (Ship.attack*10 + Enemy.attack);
+        int combination = Ship.attack * 10 + Enemy.attack;
         switch(combination)
         {
             case 11:
