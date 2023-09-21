@@ -103,14 +103,13 @@ public class Encounter {
     }
 
     public static void stormLightning(){
-        Main.clearScreen();
         System.out.println("The skies 'round ye turn as dark as a coder's soul. \n" +
                 "A taste of metal fills yer mouth, and the scent o' ozone stings yer nose. \n" +
                 "The ship's deck quivers as metal objects begin to vibrate.\n");
 
         Main.wait(10);
         System.out.println("A Data Surge Lightning Strike be on the horizon! What be yer course, captain? (1/2/3):\n");
-
+        Main.wait(5);
         System.out.println("1. Ready the VPN defenses! We'll shield the ship and face this lightning head-on!\n" +
                            "2. Quick as a flash, execute a maneuver to dodge the strike and keep us safe.\n" +
                            "3. Brave the storm and sail straight, though it risks harm to our ship, we'll not be swayed!\n");
@@ -139,10 +138,9 @@ public class Encounter {
     public static void stormWhirlwind(){
         Main.clearScreen();
         System.out.println("The lightning strike be but a memory, and they say lightning don't strike the same spot twice. \n" +
-                "Ye be prayin' that be true as ye forge ahead into the heart of the Bitstorm. \n" +
-                "All of a sudden, the winds be howlin', and a data debris whirlwind be upon us!\n");
+                "Ye be prayin' that be true as ye forge ahead into the heart of the Bitstorm.");
         Main.wait(10);
-                System.out.println("What be our course, captain? (1/2/3)\n");
+        System.out.println("All of a sudden, the winds be howlin', and a data debris whirlwind be upon us! What be our course, captain? (1/2/3)\n");
 
         System.out.println("1. Ready the swivel gun! We'll give that whirlwind a taste o' digital lead to clear our path.\n" +
                            "2. Steady as she goes, we'll navigate with caution through the whirlwind, takin' it slow but riskin' delays.\n" +
@@ -171,11 +169,10 @@ public class Encounter {
     }
     public static void stormEruption(){
         Main.clearScreen();
-        System.out.println("With the whirlwind dissipated, a sense o' relief washes over ye, but ye know rest be not yet within reach! \n" +
-                "From the depths of Davey Jones' locker, a deep rumbling sound echoes — a firewall eruption be upon us!\n");
+        System.out.println("With the whirlwind dissipated, a sense o' relief washes over ye, but ye know rest be not yet within reach! \n");
         Main.wait(10);
-
-        System.out.println("What be yer orders, captain? (1/2/3))\n");
+        System.out.println("From the depths of Davey Jones' locker, a deep rumbling sound echoes — a firewall eruption be upon us! What be yer orders, captain? (1/2/3)\n");
+        Main.wait(5);
 
         System.out.println("1. Search the digital depths for a weakness or a temporary opening in the firewall to pass through.\n" +
                 "2. Ready the DDOS cannon, matey! We'll blast through that firewall and carve a path for our ship.\n" +
@@ -209,7 +206,7 @@ public class Encounter {
         Main.wait(10);
 
         System.out.println("'Tis a data packet wave, me heartie! What be yer orders, captain? (1/2/3)\n");
-
+        Main.wait(5);
         System.out.println("1. Ready the encryption measures!! We'll raise a protective shield against the oncomin' packet wave.");
         System.out.println("2. Steer the ship with skill and precision! We'll ride the wave to gain a temporary speed boost!");
         System.out.println("3. Slacken the sails and weather the wave with caution, riskin' little but sacrificin' some speed.\n");
@@ -242,8 +239,7 @@ public class Encounter {
 
 
     public static void stormEnd()   {
-        Main.clearScreen();
-        System.out.println("With the Bitstorm behind us, we set our course forward, onward to new digital horizons! \n" +
+        System.out.println("\nWith the Bitstorm behind us, we set our course forward, onward to new digital horizons! \n" +
                 "The high binary seas await, and there be adventures yet to come, me heartie!\n");
         Main.wait(10);
     }
@@ -253,8 +249,7 @@ public class Encounter {
             case 1:
                 int storm1 = roll.nextInt(3)+1;
                 if(input == storm1)  {
-                    System.out.println("Alas! The lightning strikes true, and we've taken damage, \n" +
-                            "but our spirit be unbreakable! We press on, aye!\n");
+                    System.out.println("Alas! The lightning strikes true, and we've taken damage, but our spirit be unbreakable! We press on, aye!\n");
                     Ship.health --;
                     healthCheck();
                 }
@@ -308,7 +303,7 @@ public class Encounter {
         Main.clearScreen();
         System.out.println("With the Bitstorm finally behind us, the air clears, and we find ourselves bathed in the calm after the digital tempest. \n" +
                 "The ship sails steadily as we breathe a sigh of relief, believin' the worst to be behind us. \n" +
-                "Little did we know, me hearties, that the high binary seas still held a twist of fate in store.\n");
+                "Little did we know, me hearties, that the high binary seas still held a twist of fate in store!\n");
 
         Main.wait(20);
 

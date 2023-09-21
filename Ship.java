@@ -29,9 +29,9 @@ public class Ship {
     {
         attack = 0;
 
-        System.out.println("\nThe privateer be relentless in its pursuit, but we'll not surrender without a fight!");
+        System.out.println("\nThe privateer be relentless in its pursuit, but we'll not surrender without a fight!\n");
         Main.wait(5);
-        System.out.println("What be yer orders this turn? (1/2/3)\n");
+        System.out.println("What be yer orders this turn? (1/2/3)");
 
         System.out.println("1. Ready the DDOS broadside! We'll unleash a digital tempest to overwhelm the privateer's systems!");
         System.out.println("2. Execute evasive VPN maneuvers, attemptin' to dodge their attacks and keep our ship safe!");
