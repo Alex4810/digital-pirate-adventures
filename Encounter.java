@@ -134,7 +134,7 @@ public class Encounter {
     }
     public static void stormEruption(){
         System.out.println("With the whirlwind dissipated, a sense o' relief washes over ye, but ye know rest be not yet within reach! \n" +
-                "From the depths of Davey Jones' locker, a deep rumbling sound echoes—a firewall eruption be upon us!\n");
+                "From the depths of Davey Jones' locker, a deep rumbling sound echoes — a firewall eruption be upon us!\n");
         Main.wait(10);
 
         System.out.println("What be yer orders, captain? (1/2/3))");
@@ -214,7 +214,7 @@ public class Encounter {
                 }
                 else
                 {
-                    System.out.println("Our defenses held strong, and the lightning be naught but a spark! \n " +
+                    System.out.println("Our defenses held strong, and the lightning be naught but a spark! \n" +
                             "Onward we sail, unharmed and undeterred!\n");
                 }
                 break;

@@ -11,6 +11,7 @@ public class Main {
         Encounter.email();
         askNext();
         Encounter.privateerIntro();
+        Encounter.privateerFight();
 
     }
     public static void intro()
