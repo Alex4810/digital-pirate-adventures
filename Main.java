@@ -62,14 +62,14 @@ public class Main {
                 switch (ans)
                 {
                     case "1":
-                        System.out.println("\"Aye, matey! To the Library Genesis we shall sail first! \n" +
-                                "Knowledge be our treasure today!\"\n");
+                        System.out.println("Aye, matey! To the Library Genesis we shall sail first! \n" +
+                                "Knowledge be our treasure today!\n");
                         wait(5);
                         Encounter.library();
                         break;
                     case "2":
-                        System.out.println("\"There be no time to waste! Arrr, hoist the anchor! \n" +
-                                "We'll be setting a course straight for The Pirate Bay, adventure awaits!\"\n");
+                        System.out.println("There be no time to waste! Arrr, hoist the anchor! \n" +
+                                "We'll be setting a course straight for The Pirate Bay, adventure awaits!\n");
                         wait(5);
                         Encounter.stormIntro();
                         break;
