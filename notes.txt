@@ -53,3 +53,23 @@ Malware Swivel Gun vs. Firewall Broadside:
 Malware Swivel Gun vs. IP Tracker Swivel Gun:
 "The enemy's IP-tracker swivel gun hits us first, and it disables our attack. Blast it all!"
 
+
+
+ending:
+
+Scenario 1: library = true, textbook = true
+"Arr, ye've secured the coveted torrent ye sought, and ye've made a true pirate's promise to share the class tome with yer matey."
+"A fine haul and a loyal heart – the high binary seas have treated ye well, me heartie!"
+
+Scenario 2: library = true, textbook = false
+"Ye've got yer hands on the prized torrent, but ye missed the chance to honor the request of a fellow pirate."
+"Fear not, there be more chances ahead, and ye'll keep that promise in the next digital voyage."
+
+Scenario 3: library = false, textbook = false
+"Though the textbook slipped through yer grasp this time, ye've captured the digital treasure ye set out for."
+"With determination in yer heart, ye'll continue the search and ensure yer matey gets their hands on the class tome soon."
+
+General Ending Message: Pondering the Next Course
+"With yer ultimate goal achieved, the digital horizon stretches out before ye like an endless sea of opportunities."
+"The high binary seas be full of uncharted territory and bountiful treasures, and as ye stand on the brink of new adventures,"
+"ye can't help but wonder where yer digital piracy journey will take ye next. Set sail, me heartie, for the horizon beckons!"

@@ -2,24 +2,36 @@ import java.util.Scanner;
 
 
 public class Main {
+    public static final Scanner scan = new Scanner(System.in);
     public static void main(String[] args)
     {
-        Encounter.pirateBayIntro();
-
 
         intro();
         introPlayerResponse();
-        clearScreen();
-        Encounter.email();
 
     }
     public static void intro()
     {
         System.out.println("\nAhoy there fellow digital pirate! " +
-                "\nWelcome aboard the \"Crimson Kraken,\" a legendary ship sailin' the internet seas. " +
+                "\nWelcome aboard yer trust ship and prepaer to sail the internet seas! " +
                 "\nI be yer trusty virtual quartermaster. " +
                 "\nReady to embark on this digital adventure? (y/n)");
     }
+
+    public static void setNames()
+    {
+        System.out.println("Ahoy, matey! Before we set sail on this digital adventure, what be yer name?");
+        Ship.playerName = scan.nextLine();
+        System.out.println("And what shall we name this trusty vessel that'll carry us through the binary seas, eh?");
+        Ship.shipName = scan.nextLine();
+        System.out.println("Aye, no names be finer for sailin' the high binary seas!");
+        System.out.println("Take " + Ship.shipName + " full ahead, Captain " + Ship.playerName +"!\n" +
+                "Adventure awaits, and the digital waves be callin' our name!\n");
+        wait(10);
+
+    }
+
+
     public static void wait(int secs)
     {
         int milis = secs*1000;
@@ -35,8 +47,11 @@ public class Main {
         String response = scan.nextLine();
         switch (response) {
             case "y":
-                System.out.println("Aye, ye be ready for adventure!");
+                System.out.println("Aye, ye be ready for adventure!\n");
                 wait(3);
+                setNames();
+                wait(5);
+                Encounter.email();
                 break;
 
             case "n":

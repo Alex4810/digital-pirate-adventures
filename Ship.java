@@ -1,5 +1,7 @@
 import java.util.Scanner;
 public class Ship {
+    public static String playerName;
+    public static String shipName;
     public static Scanner scan = new Scanner(System.in);
     public static int attack = 0;
     public static int health = 10;
@@ -27,8 +29,9 @@ public class Ship {
     {
         attack = 0;
 
-        System.out.println("\nThe privateer be relentless in its pursuit, but we'll not surrender without a fight, me hearties!\n" +
-                "What be yer orders this turn? (1/2/3)\n");
+        System.out.println("\nThe privateer be relentless in its pursuit, but we'll not surrender without a fight!");
+        Main.wait(5);
+        System.out.println("What be yer orders this turn? (1/2/3)\n");
 
         System.out.println("1. Ready the DDOS broadside! We'll unleash a digital tempest to overwhelm the privateer's systems!");
         System.out.println("2. Execute evasive VPN maneuvers, attemptin' to dodge their attacks and keep our ship safe!");
