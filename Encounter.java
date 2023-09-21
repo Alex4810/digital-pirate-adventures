@@ -266,17 +266,56 @@ public class Encounter {
                 "We've found ourselves in a showdown on the digital waves, and the stakes be higher than ever! Stand ready, me hearties, for the clash of digital swords and bytes draws nigh!");
     }
 
+
+    public static int score = 0;
     public static void privateerFight()
     {
         Ship.turn();
         Enemy.turn();
 
+        int combination = (Ship.attack*10 + Enemy.attack);
 
+        switch(combination)   {
+            case 11:
+                System.out.println("Arrr! Our DDOS broadside be overwhelmin' their pitiful firewall broadside afore they get a chance to fire!");
+                score ++;
+                break;
+            case 12:
+                System.out.println("Our DDOS broadside misses, but so does their swivel gun! A standoff, it be!");
+                break;
+            case 13:
+                System.out.println("Our DDOS broadside misses, but their data snare chainshot be hittin' our ship! Brace yerselves, me hearties!");
+                score --;
+                break;
+            case 21:
+                System.out.println("Our VPN be activated, but it don't be hidin' us from their fiery firewall broadside. We be takin' a hit!");
+                score --;
+                break;
+            case 22:
+                System.out.println("Arrr! Our VPN be a lifesaver! We be hidin' our IP and evadin' their swivel gun shot with finesse!");
+                score ++;
+                break;
+            case 23:
+                System.out.println("Our VPN activates, but it be havin' no effect. Lucky for us, their data snare chainshot also be missin' the mark.");
+                break;
+            case 31:
+                System.out.println("Our swivel gun misses, but their firewall broadside be as aimless as a drunken sailor!");
+                break;
+            case 32:
+                System.out.println("The enemy's IP-tracker swivel gun hits us first, and it disables our attack. Blast it all!");
+                score --;
+                break;
+            case 33:
+                System.out.println("Our logic bomb disrupts their ability to fire a data snare chainshot. Take that, ye scallywags!");
+                score ++;
+                break;
+
+    }
         scoreCheck();
 
     }
     public static void scoreCheck(){
-        if(Ship.score>Enemy.score+1)  {
+        if(score > 1)  {
             System.out.println("win");
         }
         else {

@@ -1,0 +1,55 @@
+DDOS Broadside vs firewall broadside – our ddos broadside overwhelms their firewall broadside before they get a chance to fire.
+Ddos broadside vs ip tracker swivel gun – our ddos broadside misses, but so does their swivel gun
+Ddos broadside vs data snare chainshot – our ddos broadside misses and data snare chainshot hits player ship
+
+Vpn maneuver vs ip tracker swivel gun – our vpn allows player to hide ip and evade their ip tracker swivel gun shot.
+Vpn maneuver vs data snare chainshot –  our vpn activates, but it does nothing. However, their Data snare chainshot also misses.
+Vpn maneuver vs firewall broadside – our vpn is activated, but that doesn't hide us from their firewall broadside. we get hit.
+
+Malware swivel gun vs data snare chainshot – we fire a logic bomb that disrupts their ability to fire a data snare chainshot.
+Malware swivel gun vs firewall broadside – our swivel gun misses, but their firewall broadside also misses.
+Malware swivel gun vs ip tracker swivel gun – the enemy ip-tracker swivel gun hits us first, disabling our attack
+
+
+1/1 - win
+1/2 - null
+1/3 - lose
+
+2/1 - lose
+2/2 - win
+2/3 - null
+
+3/1 - null
+3/2 - lose
+3/3 - win
+
+
+Certainly, here be yer piratized messages for these encounters:
+
+DDOS Broadside vs. Firewall Broadside:
+
+"Arrr! Our DDOS broadside be overwhelmin' their pitiful firewall broadside afore they get a chance to fire!"
+DDOS Broadside vs. IP Tracker Swivel Gun:
+
+"Our DDOS broadside misses, but so does their swivel gun! A standoff, it be!"
+DDOS Broadside vs. Data Snare Chainshot:
+
+"Our DDOS broadside misses, but their data snare chainshot be hittin' our ship! Brace yerselves, me hearties!"
+VPN Maneuver vs. IP Tracker Swivel Gun:
+
+"Arrr! Our VPN be a lifesaver! We be hidin' our IP and evadin' their swivel gun shot with finesse!"
+VPN Maneuver vs. Data Snare Chainshot:
+
+"Our VPN activates, but it be havin' no effect. Lucky for us, their data snare chainshot also be missin' the mark."
+VPN Maneuver vs. Firewall Broadside:
+
+"Our VPN be activated, but it don't be hidin' us from their fiery firewall broadside. We be takin' a hit!"
+Malware Swivel Gun vs. Data Snare Chainshot:
+
+"We fire a logic bomb that disrupts their ability to fire a data snare chainshot. Take that, ye scallywags!"
+Malware Swivel Gun vs. Firewall Broadside:
+
+"Our swivel gun misses, but their firewall broadside be as aimless as a drunken sailor!"
+Malware Swivel Gun vs. IP Tracker Swivel Gun:
+
+"The enemy's IP-tracker swivel gun hits us first, and it disables our attack. Blast it all!"

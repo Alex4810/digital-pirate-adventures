@@ -9,7 +9,7 @@ public class Main {
         System.out.println("test");
         clearScreen();
         Encounter.email();
-        askNext(1);
+        askNext();
         Encounter.privateerIntro();
 
     }
@@ -53,12 +53,9 @@ public class Main {
         for (int i = 0; i < 50; ++i) System.out.println();
     }
 
-    public static void askNext(int encounter)
+    public static void askNext()
     {
         Scanner scan = new Scanner(System.in);
-        switch(encounter)
-        {
-            case 1:
                 System.out.println("1. Go to the Library (1)\n" +
                         "2. Sail straight to The Pirate Bay (2)");
                 String ans = scan.next();
@@ -79,9 +76,9 @@ public class Main {
                     default:
                         System.out.println("Yarrr! Ye didn't quite get the hang of it. \n" +
                                 "Try inputting '1' to visit the Library or '2' to head to The Pirate Bay.\n");
-                        askNext(1);
+                        askNext();
                 }
-        }
+
     }
 
 

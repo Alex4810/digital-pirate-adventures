@@ -1,8 +1,6 @@
 import java.util.Scanner;
 public class Ship {
     public static Scanner scan = new Scanner(System.in);
-
-    public static int score = 0;
     public static int attack = 0;
 
     public static void attack1() {
