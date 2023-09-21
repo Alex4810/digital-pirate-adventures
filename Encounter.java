@@ -250,6 +250,8 @@ public class Encounter {
                 if(input == storm1)  {
                     System.out.println("Alas! The lightning strikes true, and we've taken damage, \n" +
                             "but our spirit be unbreakable! We press on, aye!\n");
+                    Ship.health --;
+                    healthCheck();
                 }
                 else
                 {
@@ -262,6 +264,8 @@ public class Encounter {
                 if(input == storm2)  {
                     System.out.println("The data debris be strikin' the ship, causin' damage! \n" +
                             "But we'll not let it break our spirit, and we press on with the wind in our sails!\n");
+                    Ship.health --;
+                    healthCheck();
                 }
                 else
                 {
@@ -273,6 +277,8 @@ public class Encounter {
                 if(input == storm3) {
                     System.out.println("By Neptune's beard! The firewall's holdin' firm, and we must try again later. \n" +
                             "Our ship stalls, burnin' precious bandwidth!\n");
+                    Ship.health --;
+                    healthCheck();
                 }
                 else    {
                     System.out.println("Aye, the ship slipped through unscathed, and we sail onward!\n");
@@ -282,6 +288,8 @@ public class Encounter {
                 int storm4 = roll.nextInt(3)+1;
                 if(input == storm4)  {
                     System.out.println("The wave's wrath be upon us, and we've suffered packet loss! But our resolve be unshaken, and we sail on!\n");
+                    Ship.health --;
+                    healthCheck();
                 }
                 else {
                     System.out.println("Luck be smilin' upon us! We've nimbly avoided the wave, and our voyage continues with nary a packet lost!\n");
@@ -304,12 +312,11 @@ public class Encounter {
                 "Stand ready, me hearties, for the clash of digital swords and bytes draws nigh!\n");
         Main.wait(15);
         Main.clearScreen();
-        score = 0;
         privateerFight();
     }
 
 
-    public static int score = 0;
+
     public static void privateerFight()
     {
         Ship.turn();
@@ -320,7 +327,7 @@ public class Encounter {
         {
             case 11:
                 System.out.println("Arrr! Our DDOS broadside be overwhelmin' their pitiful cannons afore they get a chance to fire!");
-                score ++;
+                Enemy.health --;
                 Main.wait(5);
                 break;
             case 12:
@@ -329,17 +336,17 @@ public class Encounter {
                 break;
             case 13:
                 System.out.println("Our DDOS broadside misses, but their data snare chainshot be hittin' our ship! Brace yerselves, me hearties!");
-                score --;
+                Ship.health--;
                 Main.wait(5);
                 break;
             case 21:
                 System.out.println("Our VPN be activated, but it don't be hidin' us from their fiery firewall broadside. We be takin' a hit!");
-                score --;
+                Ship.health --;
                 Main.wait(5);
                 break;
             case 22:
                 System.out.println("Arrr! Our VPN be a lifesaver! We be hidin' our IP and evadin' their swivel gun shot with finesse!");
-                score ++;
+                Enemy.health --;
                 Main.wait(5);
                 break;
             case 23:
@@ -352,12 +359,12 @@ public class Encounter {
                 break;
             case 32:
                 System.out.println("The enemy's IP-tracker swivel gun hits us first, and it disables our attack. Blast it all!");
-                score --;
+                Ship.health -- ;
                 Main.wait(5);
                 break;
             case 33:
                 System.out.println("Our logic bomb disrupts their ability to fire a data snare chainshot. Take that, ye scallywags!");
-                score ++;
+                Enemy.health --;
                 Main.wait(5);
                 break;
             default:
@@ -373,7 +380,7 @@ public class Encounter {
         {
             System.out.println("died");
         }
-        else if(score > 1)  {
+        else if(Enemy.health == 0)  {
             System.out.println("Victory, me hearties! With a flurry of well-placed attacks and cunning maneuvers, ye've inflicted enough damage upon the enemy ship to cripple their pursuit! \n" +
                     "The enemy privateer be left floundering in the digital wake, and ye make yer escape with yer freedom intact. \n" +
                     "Ye've outwitted 'em this time, and the binary seas are once again yours to explore! \n" +
@@ -399,7 +406,7 @@ public class Encounter {
                 "The pursuit o' that new game torrent might've led ye here, but the possibilities stretch as far as the digital horizon.\n");
         System.out.println("Welcome to The Pirate Bay, where yer digital piracy escapade may find its heart-poundin' climax or lead ye to uncharted realms. \n" +
                 "The decisions be in yer hands, me heartie!");
-        Main.wait(10);
+        Main.wait(15);
 
         pirateBay();
 
@@ -410,6 +417,7 @@ public class Encounter {
         Main.clearScreen();
         System.out.println("As ye set foot on the digital shores of The Pirate Bay, ye sense yer quest's culmination. \n" +
                 "The torrent ye've sought fer so long now rests in yer grasp, awaitin' its rightful plunderin'.");
+        Main.wait(10);
 
         if(textbook)    {
             System.out.println("With the game torrent secured in yer grasp, another call to duty echoes in yer mind. \n" +
@@ -418,14 +426,14 @@ public class Encounter {
         }
         Main.wait(20);
         if(textbook){
-            System.out.println("\"After a long and treacherous voyage, ye be standin' victorious. The torrent be safe in yer grasp, and yer mate possesses a copy of the textbook. \n" +
+            System.out.println("After a long and treacherous voyage, ye be standin' victorious. The torrent be safe in yer grasp, and yer mate possesses a copy of the textbook. \n" +
                     "As ye gaze upon the bustling hub of activity within The Pirate Bay, ye ponder yer next course of action...\n");
         }
         else {
-            System.out.println("\"After a long and treacherous voyage, ye be standin' victorious. The torrent be safe in yer grasp. \n" +
+            System.out.println("After a long and treacherous voyage, ye be standin' victorious. The torrent be safe in yer grasp. \n" +
                     "As ye gaze upon the bustling hub of activity within The Pirate Bay, ye ponder yer next course of action...\n");
         }
-        Main.wait(5);
+        Main.wait(10);
         System.out.println("(1/2/3/4/5)\n");
         Main.wait(2);
         System.out.println("1. Explore the Pirate Bay: \n" +
