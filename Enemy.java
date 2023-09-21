@@ -9,16 +9,19 @@ public class Enemy {
     public static void attack1()    {
         //firewall broadside
         System.out.println("Their cannons be ablaze with fiery fury as they prepare to scorch the digital seas with a Firewall Broadside!\n");
+        Main.wait(5);
         attack = 1;
     }
     public static void attack2()    {
         //ip tracker swivel gun
         System.out.println("The enemy takes aim and fires their IP Tracker Swivel Gun, the digital crosshairs locked on our ship like a vengeful kraken!\n");
+        Main.wait(5);
         attack = 2;
     }
     public static void attack3()    {
         //data snare chainshot
         System.out.println("The enemy sets loose their Data Snare Chainshot, aiming to shred our sails and leave us driftin' in the digital abyss!\n");
+        Main.wait(5);
         attack = 3;
     }
 

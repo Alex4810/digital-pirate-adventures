@@ -324,7 +324,7 @@ public class Encounter {
                 score ++;
                 break;
             default:
-                System.out.println("this shouldn't be happening. score: " + combination );
+                System.out.println("[bug check] combination: " + combination );
                 break;
 
         }
