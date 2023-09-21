@@ -270,8 +270,8 @@ public class Encounter {
 
         Main.wait(15);
 
-        System.out.println("As we sail these digital seas, a shadow looms—the ominous 'FBI' privateer, relentless in their pursuit of digital buccaneers like us. \n" +
-                "Defeat could mean a digital brig and a life behind bars for our digital transgressions. \n" +
+        System.out.println("As we sail these digital seas, a shadow looms — an ominous privateer, relentless in their pursuit of digital buccaneers like us. \n" +
+                "Defeat could mean a digital brig and a life behind bars for our digital transgressions — it be a fate worse than death! \n" +
                 "Stand ready, me hearties, for the clash of digital swords and bytes draws nigh!\n");
         Main.wait(15);
         Main.clearScreen();
@@ -290,7 +290,7 @@ public class Encounter {
         switch(combination)
         {
             case 11:
-                System.out.println("Arrr! Our DDOS broadside be overwhelmin' their pitiful firewall broadside afore they get a chance to fire!");
+                System.out.println("Arrr! Our DDOS broadside be overwhelmin' their pitiful cannons afore they get a chance to fire!");
                 score ++;
                 Main.wait(5);
                 break;
@@ -343,6 +343,7 @@ public class Encounter {
         if(score < 0)
         {
             score = 0;
+            privateerFight();
         }
         else if(score > 1)  {
             System.out.println("\n\n-----you're winner-----\n\n");

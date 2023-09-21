@@ -20,7 +20,7 @@ public class Enemy {
     }
     public static void attack3()    {
         //data snare chainshot
-        System.out.println("The enemy sets loose their Data Snare Chainshot, aiming to shred our sails and leave us driftin' in the digital abyss!\n");
+        System.out.println("The enemy readies their Data Snare Chainshot, aiming to shred our sails and leave us driftin' in the digital abyss!\n");
         Main.wait(5);
         attack = 3;
     }
