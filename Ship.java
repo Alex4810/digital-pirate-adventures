@@ -28,7 +28,7 @@ public class Ship {
         System.out.println("Execute evasive VPN maneuvers, attemptin' to dodge their attacks and keep our ship safe!");
         System.out.println("Aim the malware swivel gun at the privateer, firin' a logic bomb to disrupt their systems and sow chaos!");
 
-        String input = scan.next();
+        String input = scan.nextLine();
 
         switch(input)   {
 

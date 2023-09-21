@@ -34,7 +34,7 @@ public class Encounter {
     }
     public static void libraryResponse(){
         System.out.println("Be ye claimin' this tome, matey?(y/n)");
-        String response = scan.next();
+        String response = scan.nextLine();
         switch(response){
             case "y":
                 System.out.println("With the enthusiasm of a scallywag findin' buried treasure, ye snatch the book. \n" +
@@ -81,7 +81,7 @@ public class Encounter {
                            "2. Quick as a flash, execute a maneuver to dodge the strike and keep us safe.\n" +
                            "3. Brave the storm and sail straight, though it risks harm to our ship, we'll not be swayed!\n");
 
-        String input = scan.next();
+        String input = scan.nextLine();
         switch (input)
         {
             case "1":
@@ -112,7 +112,7 @@ public class Encounter {
                            "2. Steady as she goes, we'll navigate with caution through the whirlwind, takin' it slow but riskin' delays.\n" +
                            "3. Put our brains to work and analyze the data patterns within the whirlwind for a potential shortcut.\n");
 
-        String input = scan.next();
+        String input = scan.nextLine();
         switch (input)
         {
             case "1":
@@ -143,7 +143,7 @@ public class Encounter {
                 "2. Ready the DDOS cannon, matey! We'll blast through that firewall and carve a path for our ship.\n" +
                 "3. Exercise patience, me heartie! Wait for the firewall to dissipate naturally, savin' our resources but takin' the risk of delay.\n");
 
-        String input = scan.next();
+        String input = scan.nextLine();
         switch (input)
         {
             case "1":
@@ -174,7 +174,7 @@ public class Encounter {
         System.out.println("2. Steer the ship with skill and precision! We'll ride the wave to gain a temporary speed boost!");
         System.out.println("3. Slacken the sails and weather the wave with caution, riskin' little but sacrificin' some speed.\n");
 
-        String input = scan.next();
+        String input = scan.nextLine();
         switch (input)
         {
             case "1":
