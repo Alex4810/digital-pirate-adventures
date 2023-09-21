@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Ship {
     public static Scanner scan = new Scanner(System.in);
     public static int attack = 0;
+    public static int health = 10;
 
     public static void attack1() {
         System.out.println("The DDOS Broadside cannons bellow to life as we be ready to unleash a storm of digital mayhem!\n");

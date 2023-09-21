@@ -5,6 +5,7 @@ public class Encounter {
 
     private static final Random roll = new Random();
     private static final Scanner scan = new Scanner(System.in);
+    public static boolean textbook = false;
 
     public static void email()//email
     {
@@ -20,6 +21,33 @@ public class Encounter {
         Main.wait(10);
         System.out.println("\nHmm, it be lookin' like we ought to make a course for The Pirate Bay." +
                 "\nBut mayhaps we should pay a visit to the library if fortune smiles upon us.");
+        libOrSea();
+    }
+    public static void libOrSea()
+    {
+        System.out.println("1. Go to the Library (1)\n" +
+                "2. Sail straight to The Pirate Bay (2)");
+        String ans = scan.next();
+        switch (ans)
+        {
+            case "1":
+                System.out.println("Aye, matey! To the Library Genesis we shall sail first! \n" +
+                        "Knowledge be our treasure today!\n");
+                Main.wait(5);
+                library();
+                break;
+            case "2":
+                System.out.println("There be no time to waste! Arrr, hoist the anchor! \n" +
+                        "We'll be setting a course straight for The Pirate Bay, adventure awaits!\n");
+                Main.wait(5);
+                Encounter.stormIntro();
+                break;
+            default:
+                System.out.println("Yarrr! Ye didn't quite get the hang of it. \n" +
+                        "Try inputting '1' to visit the Library or '2' to head to The Pirate Bay.\n");
+                libOrSea();
+        }
+
     }
 
     public static void library() {
@@ -37,6 +65,7 @@ public class Encounter {
         String response = scan.nextLine();
         switch(response){
             case "y":
+                textbook = true;
                 System.out.println("With the enthusiasm of a scallywag findin' buried treasure, ye snatch the book. \n" +
                         "Ye tuck it away for future plunder, knowin' full well it'll be dispatched to one of yer shipmates. \n" +
                         "With booty in hand, ye press on with yer grand adventure.");
@@ -336,22 +365,98 @@ public class Encounter {
                 break;
 
         }
-        scoreCheck();
+        fightHealthCheck();
 
     }
-    public static void scoreCheck(){
-        if(score < 0)
+    public static void fightHealthCheck(){
+        if(Ship.health == 0)
         {
-            score = 0;
-            privateerFight();
+            System.out.println("died");
         }
         else if(score > 1)  {
-            System.out.println("\n\n-----you're winner-----\n\n");
+            System.out.println("Victory, me hearties! With a flurry of well-placed attacks and cunning maneuvers, ye've inflicted enough damage upon the enemy ship to cripple their pursuit! \n" +
+                    "The enemy privateer be left floundering in the digital wake, and ye make yer escape with yer freedom intact. \n" +
+                    "Ye've outwitted 'em this time, and the binary seas are once again yours to explore! \n" +
+                    "Onward to The Pirate Bay!");
+            Main.wait(15);
+            pirateBayIntro();
         }
         else {
             privateerFight();
         }
+    }
 
+
+    public static void pirateBayIntro()
+    {
+        System.out.println("Af'er a harrowing journey through the turbulent seas o' the digital realm, yer vessel finally drops anchor at The Pirate Bay. \n" +
+                "This fabled sanctuary fer buccaneers, nestled deep within the binary tides, teems with activity.\n");
+        Main.wait(10);
+                System.out.println("As ye make landfall, the sights an' sounds o' fellow pirates from all corners o' the digital world surround ye. \n" +
+                "Flags adorned with the symbols o' diverse factions dance in the cyber breezes, while the buzz o' anticipation fills the air.\n");
+        Main.wait(10);
+        System.out.println("Settin' foot upon The Pirate Bay's digital shores, ye can't help but ponder the choices awaitin' ye. \n" +
+                "The pursuit o' that new game torrent might've led ye here, but the possibilities stretch as far as the digital horizon.\n");
+        System.out.println("Welcome to The Pirate Bay, where yer digital piracy escapade may find its heart-poundin' climax or lead ye to uncharted realms. \n" +
+                "The decisions be in yer hands, me heartie!");
+        Main.wait(10);
+
+        pirateBay();
+
+    }
+
+    public static void pirateBay()
+    {
+        Main.clearScreen();
+        System.out.println("As ye set foot on the digital shores of The Pirate Bay, ye sense yer quest's culmination. \n" +
+                "The torrent ye've sought fer so long now rests in yer grasp, awaitin' its rightful plunderin'.");
+
+        if(textbook)    {
+            System.out.println("With the game torrent secured in yer grasp, another call to duty echoes in yer mind. \n" +
+                    "Yer mate, the one who whispered tales of this treasure, asked ye for a simple favor - to share the class textbook. \n" +
+                    "Ye send the tome of knowledge sailin' to yer friend, offerin' gratitude for the precious information.\n");
+        }
+        Main.wait(20);
+        if(textbook){
+            System.out.println("\"After a long and treacherous voyage, ye be standin' victorious. The torrent be safe in yer grasp, and yer mate possesses a copy of the textbook. \n" +
+                    "As ye gaze upon the bustling hub of activity within The Pirate Bay, ye ponder yer next course of action...\n");
+        }
+        else {
+            System.out.println("\"After a long and treacherous voyage, ye be standin' victorious. The torrent be safe in yer grasp. \n" +
+                    "As ye gaze upon the bustling hub of activity within The Pirate Bay, ye ponder yer next course of action...\n");
+        }
+        Main.wait(5);
+        System.out.println("(1/2/3/4/5)\n");
+        Main.wait(2);
+        System.out.println("1. Explore the Pirate Bay: \n" +
+                "Be on the lookout for other treasures, more torrents to plunder...");
+        Main.wait(2);
+        System.out.println("2. Engage in Digital Trade: \n" +
+                "Snag the new game torrent and dedicate some time to seeding it for yer fellow buccaneers...");
+        Main.wait(2);
+        System.out.println("3. Set Sail for New Adventures: \n" +
+                "Whispers tell of bountiful treasures awaitin' in the uncharted binary seas...");
+        Main.wait(2);
+        System.out.println("4. Venture to Treacherous Waters: \n" +
+                "Upgradin' yer vessel with a Tor hull, sail the treacherous waters of the darkweb depths. \n" +
+                "The risk be far greater than anything you've encountered, but the plunder be worth it...");
+        Main.wait(2);
+        System.out.println("5. Go Legit: \n" +
+                "Ye've had yer fill of piracy and be considerin' the path of buyin' software. It may cost more, but the waters be calmer...");
+
+        String input = scan.nextLine();
+
+
+
+
+    }
+
+    public static void healthCheck()   {
+        if(Ship.health == 0)
+        {
+            System.out.println("you are dead.\n*RE4 Leon death sound*");
+            System.exit(0);
+        }
     }
 
 

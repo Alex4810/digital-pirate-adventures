@@ -2,6 +2,7 @@ import java.util.Random;
 public class Enemy {
     public static Random random = new Random();
     public static int attack = 0;
+    public static int health = 2;
 
 
 

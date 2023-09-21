@@ -8,10 +8,8 @@ public class Main {
 
         intro();
         introPlayerResponse();
-        System.out.println("test");
         clearScreen();
         Encounter.email();
-        askNext();
 
     }
     public static void intro()
@@ -54,33 +52,7 @@ public class Main {
         for (int i = 0; i < 50; ++i) System.out.println();
     }
 
-    public static void askNext()
-    {
-        Scanner scan = new Scanner(System.in);
-                System.out.println("1. Go to the Library (1)\n" +
-                        "2. Sail straight to The Pirate Bay (2)");
-                String ans = scan.next();
-                switch (ans)
-                {
-                    case "1":
-                        System.out.println("Aye, matey! To the Library Genesis we shall sail first! \n" +
-                                "Knowledge be our treasure today!\n");
-                        wait(5);
-                        Encounter.library();
-                        break;
-                    case "2":
-                        System.out.println("There be no time to waste! Arrr, hoist the anchor! \n" +
-                                "We'll be setting a course straight for The Pirate Bay, adventure awaits!\n");
-                        wait(5);
-                        Encounter.stormIntro();
-                        break;
-                    default:
-                        System.out.println("Yarrr! Ye didn't quite get the hang of it. \n" +
-                                "Try inputting '1' to visit the Library or '2' to head to The Pirate Bay.\n");
-                        askNext();
-                }
 
-    }
 
 
 
