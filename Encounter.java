@@ -13,7 +13,7 @@ public class Encounter {
         System.out.println("Ahoy, it seems there be a fresh scroll in the inbox!");
         Main.wait(3);
         System.out.println("Enter yer secret passphrase to unfurl the message, matey:");
-        String input = scan.next();
+        String input = scan.nextLine();
         Main.wait(1);
         System.out.println("[Hey what's up, the torrent file for that new game got released this morning." +
                 "\nps if you get the chance could you send me the textbook for the class? ty.]");
