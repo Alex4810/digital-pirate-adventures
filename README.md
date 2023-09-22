@@ -19,6 +19,7 @@ Welcome to **Digital Pirate Adventures**, a thrilling text-based game that takes
 1. Clone this repository to your local machine.
 2. Run the game in your IDE of choice.
 3. Follow the given prompts to make choices and progress through the adventure.
+4. Have fun (mandatory).
 
 ## Disclaimer
 
