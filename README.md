@@ -17,7 +17,7 @@ Welcome to **Digital Pirate Adventures**, a thrilling text-based game that takes
 ## How to Play
 
 1. Clone this repository to your local machine.
-2. Run the game in your IDE of choice.
+2. Run "Main.java" in your IDE of choice.
 3. Follow the given prompts to make choices and progress through the adventure.
 4. Have fun (mandatory).
 
