@@ -138,7 +138,7 @@ public class Encounter {
     public static void stormWhirlwind(){
         Main.clearScreen();
         System.out.println("The lightning strike be but a memory, and they say lightning don't strike the same spot twice. \n" +
-                "Ye be prayin' that be true as ye forge ahead into the heart of the Bitstorm.");
+                "Ye be prayin' that be true as ye forge ahead into the heart of the Bitstorm.\n");
         Main.wait(10);
         System.out.println("All of a sudden, the winds be howlin', and a data debris whirlwind be upon us! What be our course, captain? (1/2/3)\n");
 
@@ -307,8 +307,8 @@ public class Encounter {
 
         Main.wait(20);
 
-        System.out.println("As we sail these digital seas, a shadow looms — an ominous privateer, relentless in their pursuit of digital buccaneers like us. \n" +
-                "Defeat could mean a digital brig and a life behind bars for our digital transgressions — it be a fate worse than death! \n" +
+        System.out.println("As we sail these digital seas, a shadow looms — an ominous privateer, relentless in their pursuit of buccaneers like us. \n" +
+                "Defeat could mean a life behind bars for our digital transgressions — it be a fate worse than death! \n" +
                 "Stand ready, me hearties, for the clash of digital swords and bytes draws nigh!\n");
         Main.wait(20);
         Main.clearScreen();
@@ -384,7 +384,7 @@ public class Encounter {
             System.out.println("\nVictory, me hearties! With a flurry of well-placed attacks and cunning maneuvers, ye've been able to cripple their pursuit! \n" +
                     "The enemy privateer be left floundering in the digital wake, and ye make yer escape with yer freedom intact. \n");
             Main.wait(5);
-            System.out.println("\nYe've outwitted 'em this time, and the binary seas are once again yours to explore! \n" +
+            System.out.println("Ye've outwitted 'em this time, and the binary seas are once again yours to explore! \n" +
                     "Onward to The Pirate Bay!\n");
             Main.wait(20);
             pirateBayIntro();
@@ -407,8 +407,9 @@ public class Encounter {
         Main.wait(10);
         System.out.println("Settin' foot upon The Pirate Bay's digital shores, ye can't help but ponder the choices awaitin' ye. \n" +
                 "The pursuit o' that new game torrent might've led ye here, but the possibilities stretch as far as the digital horizon.\n");
-        System.out.println("Welcome to The Pirate Bay, where legends of the high binary seas come to life!");
-        Main.wait(15);
+        Main.wait(10);
+        System.out.println("Welcome to The Pirate Bay, where legends of the high binary seas come to life!\n");
+        Main.wait(5);
 
         pirateBay();
 
@@ -420,32 +421,32 @@ public class Encounter {
         {
             if(textbook)
             {
-                System.out.println("Arr, ye've secured the coveted torrent ye sought, and ye've made a true pirate's promise to share the class tome with yer matey.");
+                System.out.println("Arr, ye've secured the coveted torrent ye sought, and ye've made a true pirate's promise to share the class tome with yer matey.\n");
                 Main.wait(10);
-                System.out.println("A fine haul and a loyal heart – the high binary seas have treated ye well, me heartie!");
+                System.out.println("A fine haul and a loyal heart – the high binary seas have treated ye well, me heartie!\n");
                 Main.wait(10);
             }
             else
             {
-                System.out.println("Ye've got yer hands on the prized torrent, but ye missed the chance to honor the request of a fellow pirate.");
+                System.out.println("Ye've got yer hands on the prized torrent, but ye missed the chance to honor the request of a fellow pirate.\n");
                 Main.wait(10);
-                System.out.println("Fear not, there be more chances ahead, and ye'll keep that promise in the next digital voyage.");
+                System.out.println("Fear not, there be more chances ahead, and ye'll keep that promise in the next digital voyage.\n");
                 Main.wait(10);
             }
         }
         else
         {
-            System.out.println("Though the textbook slipped through yer grasp this time, ye've captured the digital treasure ye set out for.");
+            System.out.println("Though the textbook slipped through yer grasp this time, ye've captured the digital treasure ye set out for.\n");
             Main.wait(10);
-            System.out.println("With determination in yer heart, ye'll continue the search and ensure yer matey gets their hands on the class tome soon.");
+            System.out.println("With determination in yer heart, ye'll continue the search and ensure yer matey gets their hands on the class tome soon.\n");
             Main.wait(10);
         }
 
-        System.out.println("With yer ultimate goal achieved, the digital horizon stretches out before ye like an endless sea of opportunities.");
+        System.out.println("With yer ultimate goal achieved, the digital horizon stretches out before ye like an endless sea of opportunities.\n");
         Main.wait(10);
-        System.out.println("The high binary seas be full of uncharted territory and bountiful treasures, and as ye stand on the brink of new adventures,");
+        System.out.println("The high binary seas be full of uncharted territory and bountiful treasures, and as ye stand on the brink of new adventures,\n");
         Main.wait(10);
-        System.out.println("ye can't help but wonder where yer digital piracy journey will take ye next. Set sail, me heartie, for the horizon beckons!");
+        System.out.println("ye can't help but wonder where yer digital piracy journey will take ye next. Set sail, me heartie, for the horizon beckons!\n");
         Main.wait(10);
         System.out.println("(1/2/3/4/5)\n");
         Main.wait(10);
@@ -502,8 +503,8 @@ public class Encounter {
             System.exit(0);
 
 //            System.out.println("Arrr, matey, ye fought valiantly, but the digital tide turned against ye. \n"
-//            +"The privateer's grasp be too tight, and now ye find yerself in the brig, the infamous Jolly Pirate Bay Prison. \n"
-//            +"Ye may have lost this battle, but fear not, for the binary seas be vast, and the adventure ain't over yet!");
+//            +"The privateer's grasp be too tight, and the authorities have ye clapped in irons. \n"
+//            +"Ye may have lost this battle, but fear not, there always be another adventure awaitin' on these binary waves!");
 
         }
     }

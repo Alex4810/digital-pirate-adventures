@@ -13,7 +13,7 @@ public class Main {
     public static void intro()
     {
         System.out.println("\nAhoy there fellow digital pirate! " +
-                "\nWelcome aboard yer trust ship and prepaer to sail the internet seas! " +
+                "\nWelcome aboard yer trust ship and prepare to sail the internet seas! " +
                 "\nI be yer trusty virtual quartermaster. " +
                 "\nReady to embark on this digital adventure? (y/n)");
     }
