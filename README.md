@@ -4,12 +4,12 @@ Welcome to **Digital Pirate Adventures**, a thrilling text-based game that takes
 
 ## Game Description
 
-**Digital Pirate Adventure** is a unique blend of classic pirate lore and the modern world of cybersecurity. Set in a fictional digital universe, your goal is to outmaneuver rival digital privateers, solve puzzles, and make strategic decisions to become the most notorious pirate on the digital waves.
+**Digital Pirate Adventure** is a unique blend of classic pirate lore and the modern world of cybersecurity. Set in a fictional digital universe, your goal is to outmaneuver digital privateers, solve puzzles, and make strategic decisions to become the most notorious pirate on the digital waves.
 
 ## Features
 
 - Engaging text-based gameplay that emphasizes choice and consequence.
-- Navigate the digital seas, face off against rival privateers, and uncover hidden treasures.
+- Navigate the digital seas, face off against privateers, and uncover hidden treasures.
 - Encounter a variety of challenges inspired by both traditional pirate lore and the world of cybersecurity.
 - Make choices that impact the outcome of your journey, with multiple paths and endings to explore.
 - Immerse yourself in a pirate-themed digital world, complete with unique characters and vivid descriptions.
@@ -17,8 +17,8 @@ Welcome to **Digital Pirate Adventures**, a thrilling text-based game that takes
 ## How to Play
 
 1. Clone this repository to your local machine.
-2. Run the game in your terminal or command prompt.
-3. Follow the on-screen prompts to make choices and progress through the adventure.
+2. Run the game in your IDE of choice.
+3. Follow the given prompts to make choices and progress through the adventure.
 
 ## Disclaimer
 
