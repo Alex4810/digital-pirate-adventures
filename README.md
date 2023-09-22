@@ -1,4 +1,4 @@
-# Digital Pirate Adventure
+# Digital Pirate Adventures
 
 Welcome to **Digital Pirate Adventures**, a thrilling text-based game that takes you on a high-seas journey through the treacherous waters of the digital realm! In this swashbuckling adventure, you'll assume the role of a daring digital pirate, navigating the high binary seas while facing various challenges and encounters.
 
@@ -22,7 +22,7 @@ Welcome to **Digital Pirate Adventures**, a thrilling text-based game that takes
 
 ## Disclaimer
 
-**Digital Pirate Adventure** contains elements and allusions to digital piracy for entertainment and thematic purposes only. It is not intended to endorse or promote any illegal activities, including piracy, hacking, or any form of cybercrime. The creator of this game does not condone or support any unlawful activities in the real world. The game's content is purely fictional and should be enjoyed as a digital adventure in a fictional universe.
+**Digital Pirate Adventures** contains elements and allusions to digital piracy for entertainment and thematic purposes only. It is not intended to endorse or promote any illegal activities, including piracy, hacking, or any form of cybercrime. The creator of this game does not condone or support any unlawful activities in the real world. The game's content is purely fictional and should be enjoyed as a digital adventure in a fictional universe.
 
 Please play responsibly and be mindful of real-world laws and ethical guidelines when it comes to digital activities.
 
