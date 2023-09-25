@@ -12,17 +12,14 @@ public class Encounter {
     {
         Main.clearScreen();
         System.out.println("First, let's cast our eyes upon our electronic treasure chest and see if we've plundered any digital messages.");
-        Main.wait(5);
-        System.out.println("Ahoy, it seems there be a fresh scroll in the inbox!");
-        Main.wait(3);
-        System.out.println("Enter yer secret passphrase to unfurl the message, matey:");
+        System.out.println("\nAhoy, it seems there be a fresh scroll in the inbox!");
+        System.out.println("\nEnter yer secret passphrase to unfurl the message, matey:");
         String input = scan.nextLine();
-        Main.wait(1);
         System.out.println("[Hey what's up, the torrent file for that new game just got released this morning." +
                 "\nps if you get the chance could you send me the textbook for the class? ty.]");
-        Main.wait(10);
+
         System.out.println("\nHmm, it be lookin' like we ought to make a course for The Pirate Bay." +
-                "\nBut mayhaps we should pay a visit to the library if fortune smiles upon us.");
+                "\nBut mayhaps we should pay a visit to the library if fortune smiles upon us.\n");
         libOrSea();
     }
     public static void libOrSea()
@@ -34,16 +31,16 @@ public class Encounter {
         {
             case "1":
                 library = true;
-                System.out.println("Aye, matey! To the Library Genesis we shall sail first! \n" +
+                System.out.println("\nAye, matey! To the Library Genesis we shall sail first! \n" +
                         "Knowledge be our treasure today!\n");
-                Main.wait(5);
+                Main.enterToContinue();
                 library();
                 break;
             case "2":
                 library = false;
                 System.out.println("There be no time to waste! Arrr, hoist the anchor! \n" +
                         "We'll be setting a course straight for The Pirate Bay, adventure awaits!\n");
-                Main.wait(5);
+                Main.enterToContinue();
                 Encounter.stormIntro();
                 break;
             default:
@@ -58,29 +55,27 @@ public class Encounter {
         Main.clearScreen();
         System.out.println("Arrr! Ye find yerself at the legendary Library Genesis, \n" +
                 "a digital treasure trove, hidden deep within the vast digital ocean.");
-        Main.wait(10);
-        System.out.println("Standin' at the entrance, a salty dog named Keshav ambles over, boastin' a friendly grin. \n" +
+        System.out.println("\nStandin' at the entrance, a salty dog named Keshav ambles over, boastin' a friendly grin. \n" +
                 "He introduces himself as the guardian of this trove and extends a digital textbook to ye.");
-        Main.wait(10);
         libraryResponse();
     }
     public static void libraryResponse(){
-        System.out.println("Be ye claimin' this tome, matey?(y/n)");
+        System.out.println("\nBe ye claimin' this tome, matey?(y/n)");
         String response = scan.nextLine();
         switch(response){
             case "y":
                 textbook = true;
-                System.out.println("With the enthusiasm of a scallywag findin' buried treasure, ye snatch the book. \n" +
+                System.out.println("\nWith the enthusiasm of a scallywag findin' buried treasure, ye snatch the book. \n" +
                         "Ye tuck it away for future plunder, knowin' full well it'll be dispatched to one of yer shipmates. \n" +
                         "With booty in hand, ye press on with yer grand adventure.");
-                Main.wait(15);
+                Main.enterToContinue();
                 stormIntro();
                 break;
             case "n":
                 textbook = false;
-                System.out.println("With a polite but firm refusal, ye steer clear of the offer, \n" +
+                System.out.println("\nWith a polite but firm refusal, ye steer clear of the offer, \n" +
                         "continuin' yer escapade, a hearty 'no thanks' ringin' from yer lips.");
-                Main.wait(15);
+                Main.enterToContinue();
                 stormIntro();
                 break;
             default:
@@ -94,22 +89,20 @@ public class Encounter {
 
     public static void stormIntro(){
         Main.clearScreen();
-        Main.wait(2);
-        System.out.println("Ye be sailin' onward, but a fearsome Bitstorm be upon us! \n" +
-                "We'll need to muster all our courage and wit to navigate this tempest, \n" +
+        System.out.println("Ye be sailin' onward, but a fearsome Bitstorm be upon us! \n\n" +
+                "We'll need to muster all our courage and wit to navigate this tempest, \n\n" +
                 "but I've no doubt we'll emerge triumphant on the other side, matey!\n");
-        Main.wait(15);
+        Main.enterToContinue();
         stormLightning();
     }
 
     public static void stormLightning(){
-        System.out.println("The skies 'round ye turn as dark as a coder's soul. \n" +
-                "A taste of metal fills yer mouth, and the scent o' ozone stings yer nose. \n" +
+        System.out.println("The skies 'round ye turn as dark as a coder's soul. \n\n" +
+                "A taste of metal fills yer mouth, and the scent o' ozone stings yer nose. \n\n" +
                 "The ship's deck quivers as metal objects begin to vibrate.\n");
+        Main.enterToContinue();
+        System.out.println("\nA Data Surge Lightning Strike be on the horizon! What be yer course, captain? (1/2/3):\n");
 
-        Main.wait(10);
-        System.out.println("A Data Surge Lightning Strike be on the horizon! What be yer course, captain? (1/2/3):\n");
-        Main.wait(5);
         System.out.println("1. Ready the VPN defenses! We'll shield the ship and face this lightning head-on!\n" +
                            "2. Quick as a flash, execute a maneuver to dodge the strike and keep us safe.\n" +
                            "3. Brave the storm and sail straight, though it risks harm to our ship, we'll not be swayed!\n");
@@ -132,14 +125,14 @@ public class Encounter {
                         "Act swiftly, lest the tempest consumes us!\n");
                 break;
         }
-        Main.wait(10);
+        Main.enterToContinue();
         stormWhirlwind();
     }
     public static void stormWhirlwind(){
         Main.clearScreen();
         System.out.println("The lightning strike be but a memory, and they say lightning don't strike the same spot twice. \n" +
                 "Ye be prayin' that be true as ye forge ahead into the heart of the Bitstorm.\n");
-        Main.wait(10);
+        Main.enterToContinue();
         System.out.println("All of a sudden, the winds be howlin', and a data debris whirlwind be upon us! What be our course, captain? (1/2/3)\n");
 
         System.out.println("1. Ready the swivel gun! We'll give that whirlwind a taste o' digital lead to clear our path.\n" +
@@ -164,15 +157,15 @@ public class Encounter {
                         "Act swiftly, lest the tempest consumes us!\n");
                 break;
         }
-        Main.wait(10);
+        Main.enterToContinue();
         stormEruption();
     }
     public static void stormEruption(){
         Main.clearScreen();
         System.out.println("With the whirlwind dissipated, a sense o' relief washes over ye, but ye know rest be not yet within reach! \n");
-        Main.wait(10);
+        Main.enterToContinue();
         System.out.println("From the depths of Davey Jones' locker, a deep rumbling sound echoes — a firewall eruption be upon us! What be yer orders, captain? (1/2/3)\n");
-        Main.wait(5);
+
 
         System.out.println("1. Search the digital depths for a weakness or a temporary opening in the firewall to pass through.\n" +
                 "2. Ready the DDOS cannon, matey! We'll blast through that firewall and carve a path for our ship.\n" +

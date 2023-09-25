@@ -15,7 +15,7 @@ public class Main {
         System.out.println("\nAhoy there fellow digital pirate! " +
                 "\nWelcome aboard yer trust ship and prepare to sail the internet seas! " +
                 "\nI be yer trusty virtual quartermaster. " +
-                "\nReady to embark on this digital adventure? (y/n)");
+                "\n\nReady to embark on this digital adventure? (y/n)");
     }
 
     public static void setNames()
@@ -27,7 +27,7 @@ public class Main {
         System.out.println("Aye, no names be finer for sailin' the high binary seas!");
         System.out.println("Take " + Ship.shipName + " full ahead, Captain " + Ship.playerName +"!\n" +
                 "Adventure awaits, and the digital waves be callin' our name!\n");
-        wait(10);
+        enterToContinue();
 
     }
 
@@ -48,9 +48,9 @@ public class Main {
         switch (response) {
             case "y":
                 System.out.println("Aye, ye be ready for adventure!\n");
-                wait(3);
+                wait(1);
                 setNames();
-                wait(5);
+                wait(1);
                 Encounter.email();
                 break;
 
@@ -66,6 +66,12 @@ public class Main {
     }
     public static void clearScreen() {
         for (int i = 0; i < 50; ++i) System.out.println();
+    }
+
+    public static void enterToContinue()
+    {
+        System.out.println("\n(Press enter to continue)");
+        scan.nextLine();
     }
 
 
