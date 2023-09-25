@@ -28,7 +28,7 @@ public class Ship {
     public static void turn()
     {
         attack = 0;
-
+        Main.clearScreen();
         System.out.println("\nThe privateer be relentless in its pursuit, but we'll not surrender without a fight!\n");
         Main.wait(5);
         System.out.println("What be yer orders this turn? (1/2/3)");

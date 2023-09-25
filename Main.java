@@ -13,7 +13,7 @@ public class Main {
     public static void intro()
     {
         System.out.println("\nAhoy there fellow digital pirate! " +
-                "\nWelcome aboard yer trust ship and prepare to sail the internet seas! " +
+                "\nWelcome aboard yer trust ship and preparey to sail the internet seas! " +
                 "\nI be yer trusty virtual quartermaster. " +
                 "\n\nReady to embark on this digital adventure? (y/n)");
     }
@@ -48,9 +48,9 @@ public class Main {
         switch (response) {
             case "y":
                 System.out.println("Aye, ye be ready for adventure!\n");
-                wait(1);
+
                 setNames();
-                wait(1);
+
                 Encounter.email();
                 break;
 

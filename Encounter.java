@@ -222,7 +222,7 @@ public class Encounter {
                         "Act swiftly, lest the tempest consumes us!\n");
                 break;
         }
-        Main.wait(2);
+
         stormEnd();
         Main.enterToContinue();
         privateerIntro();
@@ -234,7 +234,7 @@ public class Encounter {
     public static void stormEnd()   {
         System.out.println("\n\nThe Bitstorm be behind us, me hearties! We set our course forward, onward to new digital horizons! \n" +
                 "\nThe high binary seas await, and there be adventures yet to come, me heartie!\n");
-        Main.wait(10);
+        Main.enterToContinue();
     }
 
     public static void stormRoll(int type, int input){
@@ -379,13 +379,14 @@ public class Encounter {
         else if(Enemy.health == 0)  {
             System.out.println("\nVictory, me hearties! With a flurry of well-placed attacks and cunning maneuvers, ye've been able to cripple their pursuit! \n" +
                     "The enemy privateer be left floundering in the digital wake, and ye make yer escape with yer freedom intact. \n");
-            Main.wait(2);
+
             System.out.println("Ye've outwitted 'em this time, and the binary seas are once again yours to explore! \n" +
                     "Onward to The Pirate Bay!\n");
             Main.enterToContinue();
             pirateBayIntro();
         }
         else {
+            Main.enterToContinue();
             privateerFight();
         }
     }
