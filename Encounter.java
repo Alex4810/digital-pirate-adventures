@@ -224,7 +224,6 @@ public class Encounter {
         }
 
         stormEnd();
-        Main.enterToContinue();
         privateerIntro();
 
 
@@ -371,18 +370,19 @@ public class Encounter {
     public static void fightHealthCheck(){
         if(Ship.health == 0)
         {
+            Main.enterToContinue();
             System.out.println("Arrr, matey, ye fought valiantly, but the digital tide turned against ye. \n"
                     +"The privateer's grasp be too tight, and the authorities have ye clapped in irons. \n"
                     +"Ye may have lost this battle, but fear not, there always be another adventure awaitin' on these binary waves!");
             System.exit(0);
         }
         else if(Enemy.health == 0)  {
+            Main.enterToContinue();
             System.out.println("\nVictory, me hearties! With a flurry of well-placed attacks and cunning maneuvers, ye've been able to cripple their pursuit! \n" +
                     "The enemy privateer be left floundering in the digital wake, and ye make yer escape with yer freedom intact. \n");
 
             System.out.println("Ye've outwitted 'em this time, and the binary seas are once again yours to explore! \n" +
                     "Onward to The Pirate Bay!\n");
-            Main.enterToContinue();
             pirateBayIntro();
         }
         else {
