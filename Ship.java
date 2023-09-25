@@ -8,19 +8,19 @@ public class Ship {
 
     public static void attack1() {
         System.out.println("The DDOS Broadside cannons bellow to life as we be ready to unleash a storm of digital mayhem!\n");
-        Main.wait(5);
+
         attack = 1;
         //DDOS Broadside
     }
     public static void attack2(){
         System.out.println("With a flick of the switch, our ship be vanishing into the digital shadows, hidden from prying eyes!\n");
-        Main.wait(5);
+
         attack = 2;
         //VPN Maneuver
     }
     public static void attack3(){
         System.out.println("The Malware Swivel Gun be primed, poised to fire a logic bomb that'll set their systems a'rumblin'!\n");
-        Main.wait(5);
+
         attack = 3;
         //Malware Swivel Gun - logic bomb
     }

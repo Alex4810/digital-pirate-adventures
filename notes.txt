@@ -43,7 +43,7 @@ VPN Maneuver vs. Data Snare Chainshot:
 VPN Maneuver vs. Firewall Broadside:
 "Our VPN be activated, but it don't be hidin' us from their fiery firewall broadside. We be takin' a hit!"
 
-
+   
 Malware Swivel Gun vs. Data Snare Chainshot:
 "We fire a logic bomb that disrupts their ability to fire a data snare chainshot. Take that, ye scallywags!"
 
