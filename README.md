@@ -2,7 +2,7 @@
 
 Welcome to **Digital Pirate Adventures**, a thrilling text-based game that takes you on a high-seas journey through the treacherous waters of the digital realm! In this swashbuckling adventure, you'll assume the role of a daring digital pirate, navigating the high binary seas while facing various challenges and encounters.
 
-**Notice**: The latest commit in this branch contains experimental changes and unfinished content. While we're working hard to improve the game, we recommend playing the stable release for the best experience.
+**Notice**: The latest commit in this branch contains experimental changes and unfinished content. While I'm working hard to improve the game, I recommend playing the stable release for the best experience.
 
 [Play Stable Release (1.0.4)](link-to-stable-release)
 
