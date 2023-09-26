@@ -76,6 +76,15 @@ public class Main {
         scan.nextLine();
     }
 
+    public static void healthCheck()   {
+        if(Player.health == 0)
+        {
+            System.out.println("\n\nyou are dead.\n\n*RE4 Leon death sound*");
+            System.exit(0);
+
+        }
+    }
+
     public static int d20()
     {
         return roll.nextInt(20)+1;
