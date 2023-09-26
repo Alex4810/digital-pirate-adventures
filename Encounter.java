@@ -14,7 +14,7 @@ public class Encounter {
         System.out.println("First, let's cast our eyes upon our electronic treasure chest and see if we've plundered any digital messages.");
         System.out.println("\nAhoy, it seems there be a fresh scroll in the inbox!");
         System.out.println("\nEnter yer secret passphrase to unfurl the message, matey:");
-        String input = scan.nextLine();
+        scan.nextLine();
         System.out.println("[Hey what's up, the torrent file for that new game just got released this morning." +
                 "\nps if you get the chance could you send me the textbook for the class? ty.]");
 
@@ -224,7 +224,7 @@ public class Encounter {
         }
 
         stormEnd();
-        privateerIntro();
+        Fight.intro();
 
 
     }
@@ -242,7 +242,7 @@ public class Encounter {
                 int storm1 = roll.nextInt(3)+1;
                 if(input == storm1)  {
                     System.out.println("Alas! The lightning strikes true, and we've taken damage, but our spirit be unbreakable! We press on, aye!\n");
-                    Ship.health --;
+                    Player.health --;
                     healthCheck();
                 }
                 else
@@ -256,7 +256,7 @@ public class Encounter {
                 if(input == storm2)  {
                     System.out.println("The data debris be strikin' the ship, causin' damage! \n" +
                             "But we'll not let it break our spirit, and we press on with the wind in our sails!\n");
-                    Ship.health --;
+                    Player.health --;
                     healthCheck();
                 }
                 else
@@ -269,7 +269,7 @@ public class Encounter {
                 if(input == storm3) {
                     System.out.println("By Neptune's beard! The firewall's holdin' firm, and we must try again later. \n" +
                             "Our ship stalls, burnin' precious bandwidth!\n");
-                    Ship.health --;
+                    Player.health --;
                     healthCheck();
                 }
                 else    {
@@ -280,7 +280,7 @@ public class Encounter {
                 int storm4 = roll.nextInt(3)+1;
                 if(input == storm4)  {
                     System.out.println("The wave's wrath be upon us, and we've suffered packet loss! But our resolve be unshaken, and we sail on!\n");
-                    Ship.health --;
+                    Player.health --;
                     healthCheck();
                 }
                 else {
@@ -290,106 +290,8 @@ public class Encounter {
         }
     }
 
-    public static void privateerIntro()
-    {
-        Main.clearScreen();
-        System.out.println("With the Bitstorm finally behind us, the air clears, and we find ourselves bathed in the calm after the digital tempest. \n" +
-                "The ship sails steadily as we breathe a sigh of relief, believin' the worst to be behind us. \n" +
-                "Little did we know, me hearties, that the high binary seas still held a twist of fate in store!\n");
-
-        Main.enterToContinue();
-
-        System.out.println("\nAs we sail these digital seas, a shadow looms — an ominous privateer, relentless in their pursuit of buccaneers like us. \n" +
-                "Defeat could mean a life behind bars for our digital transgressions — it be a fate worse than death! \n" +
-                "Stand ready, me hearties, for the clash of digital swords and bytes draws nigh!\n");
-        Main.enterToContinue();
-        Main.clearScreen();
-        privateerFight();
-    }
 
 
-
-    public static void privateerFight()
-    {
-        Ship.turn();
-        Enemy.turn();
-
-        int combination = Ship.attack * 10 + Enemy.attack;
-        switch(combination)
-        {
-            case 11:
-                System.out.println("Arrr! Our DDOS broadside be overwhelmin' their pitiful cannons afore they get a chance to fire!");
-                Enemy.health --;
-
-                break;
-            case 12:
-                System.out.println("Our DDOS broadside misses, but so does their swivel gun! A standoff, it be!");
-
-                break;
-            case 13:
-                System.out.println("Our DDOS broadside misses, but their data snare chainshot be hittin' our ship! Brace yerselves, me hearties!");
-                Ship.health--;
-
-                break;
-            case 21:
-                System.out.println("Our VPN be activated, but it don't be hidin' us from their fiery firewall broadside. We be takin' a hit!");
-                Ship.health --;
-
-                break;
-            case 22:
-                System.out.println("Arrr! Our VPN be a lifesaver! We be hidin' our IP and evadin' their swivel gun shot with finesse!");
-                Enemy.health --;
-
-                break;
-            case 23:
-                System.out.println("Our VPN activates, but it be havin' no effect. Lucky for us, their data snare chainshot also be missin' the mark.");
-
-                break;
-            case 31:
-                System.out.println("Our swivel gun misses, but their firewall broadside be as aimless as a drunken sailor!");
-
-                break;
-            case 32:
-                System.out.println("The enemy's IP-tracker swivel gun hits us first, and it disables our attack. Blast it all!");
-                Ship.health -- ;
-
-                break;
-            case 33:
-                System.out.println("Our logic bomb disrupts their ability to fire a data snare chainshot. Take that, ye scallywags!");
-                Enemy.health --;
-
-                break;
-            default:
-                System.out.println("[bug check] combination: " + combination );
-                break;
-
-        }
-        fightHealthCheck();
-
-    }
-    public static void fightHealthCheck(){
-        if(Ship.health == 0)
-        {
-            Main.enterToContinue();
-            System.out.println("Arrr, matey, ye fought valiantly, but the digital tide turned against ye. \n"
-                    +"The privateer's grasp be too tight, and the authorities have ye clapped in irons. \n"
-                    +"Ye may have lost this battle, but fear not, there always be another adventure awaitin' on these binary waves!");
-            System.exit(0);
-        }
-        else if(Enemy.health == 0)  {
-            Main.enterToContinue();
-            System.out.println("\nVictory, me hearties! With a flurry of well-placed attacks and cunning maneuvers, ye've been able to cripple their pursuit! \n" +
-                    "The enemy privateer be left floundering in the digital wake, and ye make yer escape with yer freedom intact. \n");
-
-            System.out.println("Ye've outwitted 'em this time, and the binary seas are once again yours to explore! \n" +
-                    "Onward to The Pirate Bay!\n");
-            pirateBayIntro();
-        }
-        else {
-            Main.enterToContinue();
-            privateerFight();
-        }
-    }
 
 
     public static void pirateBayIntro()
@@ -495,12 +397,10 @@ public class Encounter {
     }
 
     public static void healthCheck()   {
-        if(Ship.health == 0)
+        if(Player.health == 0)
         {
             System.out.println("\n\nyou are dead.\n\n*RE4 Leon death sound*");
             System.exit(0);
-
-
 
         }
     }
