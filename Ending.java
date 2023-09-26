@@ -49,7 +49,7 @@ public class Ending {
     //Venture to Treacherous Waters (Option 4) Ending:
     {
         Main.clearScreen();
-        System.out.println("With darin' courage, ye decide to `venture into the treacherous, shadowy waters of the dark web, upgradin' " + Ship.shipName + " with a reinforced Tor hull. \n");
+        System.out.println("With darin' courage, ye decide to `venture into the treacherous, shadowy waters of the dark web, upgradin' " + Player.shipName + " with a reinforced Tor hull. \n");
 
         System.out.println("The dangers be great, but so be the rewards. \n");
 
