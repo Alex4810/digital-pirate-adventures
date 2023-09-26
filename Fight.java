@@ -15,6 +15,8 @@ public class Fight {
         else {
             System.out.println("enemygofirst");
         }
+
+
     }
 
 

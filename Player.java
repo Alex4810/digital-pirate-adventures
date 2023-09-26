@@ -9,11 +9,17 @@ public class Player {
 
 
 
-    public static void attack1() {
-        System.out.println("The DDOS Broadside cannons bellow to life as we be ready to unleash a storm of digital mayhem!\n");
-
-        attack = 1;
-        //DDOS Broadside
+    public static int broadsideType = 0;
+    public static void broadside() {
+        switch(broadsideType)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+        }
     }
     public static void attack2(){
         System.out.println("With a flick of the switch, our ship be vanishing into the digital shadows, hidden from prying eyes!\n");
