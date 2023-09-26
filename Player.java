@@ -1,71 +1,33 @@
 import java.util.Scanner;
 public class Player {
-    public static int initiative;
+
     public static String playerName;
     public static String shipName;
     public static Scanner scan = new Scanner(System.in);
     public static int attack = 0;
-    public static int health = 10;
+    public static int health = 100;
+    public static int defense = 20;
+    public static int dodge = 0;
+    public static int speed = 1;
+    public static int bandwidth = 50;
 
 
 
     public static int broadsideType = 0;
-    public static void broadside() {
-        switch(broadsideType)
-        {
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-        }
-    }
-    public static void attack2(){
-        System.out.println("With a flick of the switch, our ship be vanishing into the digital shadows, hidden from prying eyes!\n");
-
-        attack = 2;
-        //VPN Maneuver
-    }
-    public static void attack3(){
-        System.out.println("The Malware Swivel Gun be primed, poised to fire a logic bomb that'll set their systems a'rumblin'!\n");
-
-        attack = 3;
-        //Malware Swivel Gun - logic bomb
-    }
+    /*
+    1 = ddos - high damage, low acc
+    2 = dns leak - mid damage, mid acc
+    3 = zero day exploit - low damage, high acc
+     */
+    public static int swivelType = 0;
+    /*
+    1 = zip bomb - damage plus lower enemy acc
+    2 = ip trace lockon - damage plus increase acc
+    3 = logic bomb - RNG damage
+     */
 
     public static void turn()
     {
-        attack = 0;
-        Main.clearScreen();
-        System.out.println("\nThe privateer be relentless in its pursuit, but we'll not surrender without a fight!\n");
-
-        System.out.println("What be yer orders this turn? (1/2/3)");
-
-        System.out.println("1. Ready the DDOS broadside! We'll unleash a digital tempest to overwhelm the privateer's systems!");
-        System.out.println("2. Execute evasive VPN maneuvers, attemptin' to dodge their attacks and keep our ship safe!");
-        System.out.println("3. Aim the malware swivel gun at the privateer, firin' a logic bomb to disrupt their systems and sow chaos!");
-
-        String input = scan.nextLine();
-
-        switch(input)   {
-
-            case "1":
-                attack1();
-                break;
-            case "2":
-                attack2();
-                break;
-            case "3":
-                attack3();
-                break;
-            default:
-                System.out.println("Yarrr! Ye be needin' to make a choice, me heartie! Input 1, 2, or 3 to evade the enemy privateer. \n" +
-                        "Any other course be takin' us straight into the digital doldrums!\n");
-                turn();
-                break;
-        }
-
 
 
     }

@@ -11,9 +11,12 @@ public class Fight {
         {
             System.out.println("playergofirst");
             Player.turn();
+            Enemy.turn();
         }
         else {
             System.out.println("enemygofirst");
+            Enemy.turn();
+            Player.turn();
         }
 
 
