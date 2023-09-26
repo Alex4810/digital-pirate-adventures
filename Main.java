@@ -1,7 +1,9 @@
+import java.util.Random;
 import java.util.Scanner;
 
 
 public class Main {
+    private static final Random roll = new Random();
     public static final Scanner scan = new Scanner(System.in);
     public static void main(String[] args)
     {
@@ -21,11 +23,11 @@ public class Main {
     public static void setNames()
     {
         System.out.println("Ahoy, matey! Before we set sail on this digital adventure, what be yer name?");
-        Ship.playerName = scan.nextLine();
+        Player.playerName = scan.nextLine();
         System.out.println("And what shall we name this trusty vessel that'll carry us through the binary seas, eh?");
-        Ship.shipName = scan.nextLine();
+        Player.shipName = scan.nextLine();
         System.out.println("Aye, no names be finer for sailin' the high binary seas!");
-        System.out.println("Take " + Ship.shipName + " full ahead, Captain " + Ship.playerName +"!\n" +
+        System.out.println("Take " + Player.shipName + " full ahead, Captain " + Player.playerName +"!\n" +
                 "Adventure awaits, and the digital waves be callin' our name!\n");
         enterToContinue();
 
@@ -72,6 +74,11 @@ public class Main {
     {
         System.out.println("\n(Press enter to continue)");
         scan.nextLine();
+    }
+
+    public static int d20()
+    {
+        return roll.nextInt(20)+1;
     }
 
 

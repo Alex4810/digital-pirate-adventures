@@ -1,23 +1,16 @@
+import java.util.Random;
 public class Fight {
+    private static final Random roll = new Random();
 
-    public static boolean initiative(int player, int enemy)
+    public static boolean initiative()
     {
-        return player >= enemy;
+        int playerInitiative = Player.speed + Main.d20();
+        int enemyInitiative = Enemy.speed + Main.d20();
+        return playerInitiative>=enemyInitiative;
     }
 
     public static void turn(Player player, Enemy enemy)
     {
-        if (initiative(Player.initiative, Enemy.initiative))
-        {
-            System.out.println("playergofirst");
-            Player.turn();
-            Enemy.turn();
-        }
-        else {
-            System.out.println("enemygofirst");
-            Enemy.turn();
-            Player.turn();
-        }
 
 
     }
