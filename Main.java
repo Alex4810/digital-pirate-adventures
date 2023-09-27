@@ -32,6 +32,17 @@ public class Main {
         enterToContinue();
 
     }
+    public static void askPlayerName()    {
+        String input = scan.nextLine();
+
+        {
+            System.out.println("Looks you didn't ");
+        }
+    }
+
+    public static void askShipName()    {
+
+    }
 
 
     public static void wait(int secs)
