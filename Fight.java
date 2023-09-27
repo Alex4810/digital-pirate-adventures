@@ -50,8 +50,9 @@ public class Fight {
         System.out.println("\nAs we sail these digital seas, a shadow looms — an ominous privateer, relentless in their pursuit of buccaneers like us. \n" +
                 "Defeat could mean a life behind bars for our digital transgressions — it be a fate worse than death! \n" +
                 "Stand ready, me hearties, for the clash of digital swords and bytes draws nigh!\n");
-        Main.enterToContinue();
-        Main.clearScreen();
+
+        System.out.println("[fight is still being implemented, so the program just skips over it rn]");
+        Encounter.pirateBayIntro();
     }
 
 
