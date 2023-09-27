@@ -72,7 +72,7 @@ public class Main {
 
     public static void enterToContinue()
     {
-        System.out.println("\n(Press enter to continue)");
+        System.out.println("\n(Enter anything to continue)");
         scan.nextLine();
     }
 

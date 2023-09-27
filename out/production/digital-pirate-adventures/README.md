@@ -2,6 +2,14 @@
 
 Welcome to **Digital Pirate Adventures**, a thrilling text-based game that takes you on a high-seas journey through the treacherous waters of the digital realm! In this swashbuckling adventure, you'll assume the role of a daring digital pirate, navigating the high binary seas while facing various challenges and encounters.
 
+**Notice**: The latest commit in this branch contains experimental changes and unfinished content. While I'm working hard to improve the game, I recommend playing the stable release for the best experience.
+
+[Play Stable Release (1.0.4)](https://github.com/Alex4810/digital-pirate-adventures/commit/1f4ecc04e60c165b254131391051281c8160bece)
+
+If you'd like to try out the latest features and provide feedback, feel free to continue with this version. However, please be aware that it may not be as polished as the stable release.
+
+Thank you for your understanding and support!
+
 ## Game Description
 
 **Digital Pirate Adventure** is a unique blend of classic pirate lore and the modern world of cybersecurity. Set in a fictional digital universe, your goal is to outmaneuver digital privateers, solve puzzles, and make strategic decisions to become the most notorious pirate on the digital waves.
