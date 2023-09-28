@@ -5,7 +5,7 @@ public class Storm {
     public static Scanner scan = new Scanner(System.in);
     public static Random roll = new Random();
 
-    public static void stormIntro(){
+    public static void intro(){
         Main.clearScreen();
         System.out.println("Ye be sailin' onward, but a fearsome Bitstorm be upon us! \n\n" +
                 "We'll need to muster all our courage and wit to navigate this tempest, \n\n" +
@@ -13,7 +13,7 @@ public class Storm {
         Main.enterToContinue();
     }
 
-    public static void stormLightning(Ship player){
+    public static void lightning(Ship player){
         System.out.println("The skies 'round ye turn as dark as a coder's soul. \n\n" +
                 "A taste of metal fills yer mouth, and the scent o' ozone stings yer nose. \n\n" +
                 "The ship's deck quivers as metal objects begin to vibrate.\n");
@@ -37,15 +37,15 @@ public class Storm {
 
                 break;
             default:
+                player.health = player.health - roll.nextInt();
                 System.out.println("Ye hesitated too long, and the storm's fury be takin' its toll. \n" +
                         "Lightning strikes the ship, causin' damage! \n" +
                         "Act swiftly, lest the tempest consumes us!\n");
                 break;
         }
         Main.enterToContinue();
-        stormWhirlwind(player);
     }
-    public static void stormWhirlwind(Ship player){
+    public static void whirlwind(Ship player){
         Main.clearScreen();
         System.out.println("The lightning strike be but a memory, and they say lightning don't strike the same spot twice. \n" +
                 "Ye be prayin' that be true as ye forge ahead into the heart of the Bitstorm.\n");
@@ -75,9 +75,8 @@ public class Storm {
                 break;
         }
         Main.enterToContinue();
-        stormEruption(player);
     }
-    public static void stormEruption(Ship player){
+    public static void eruption(Ship player){
         Main.clearScreen();
         System.out.println("With the whirlwind dissipated, a sense o' relief washes over ye, but ye know rest be not yet within reach! \n");
         Main.enterToContinue();
@@ -107,9 +106,8 @@ public class Storm {
                 break;
         }
         Main.enterToContinue();
-        stormWave(player);
     }
-    public static void stormWave(Ship player){
+    public static void wave(Ship player){
         Main.clearScreen();
         System.out.println("With the firewall behind us, it seems we be approachin' the end of the storm. \n" +
                 "But rest be not yet ours, for lo and behold, a monster swell be approachin'! \n");
@@ -140,14 +138,10 @@ public class Storm {
                 break;
         }
 
-        stormEnd();
-        Fight.intro();
-
-
     }
 
 
-    public static void stormEnd()   {
+    public static void end()   {
         System.out.println("\n\nThe Bitstorm be behind us, me hearties! We set our course forward, onward to new digital horizons! \n" +
                 "\nThe high binary seas await, and there be adventures yet to come, me heartie!\n");
         Main.enterToContinue();

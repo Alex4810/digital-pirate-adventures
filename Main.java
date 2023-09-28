@@ -12,7 +12,12 @@ public class Main {
         intro();
         introPlayerResponse();
         Encounter.email();
-        Storm.stormIntro();
+        Storm.intro();
+        Storm.lightning(player);
+        Storm.whirlwind(player);
+        Storm.eruption(player);
+        Storm.wave(player);
+        Storm.end();
 
         Encounter.pirateBayIntro();
         Encounter.pirateBay();

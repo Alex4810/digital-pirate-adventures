@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Galleon extends Ship{
 
     public Galleon()
@@ -5,26 +6,24 @@ public class Galleon extends Ship{
         super(500,200,4,3,300,4,150);
     }
 
-    public static int broadsideType;
-    public static int musketType;
-    public static int swivelType;
-    public static void customize()
+
+    @Override
+    public void customize()
     {
+        System.out.println("Ah, a galleon! A mighty sailin' vessel, a fine choice, captain!");
         System.out.println("Arr, now let's take a look at yer ship...");
+        setBroadside(broadsideType);
+        setSwivel(swivelType);
+
     }
 
-    public static void broadside(int type)
+    @Override
+    public void turn()
     {
-
+        System.out.println("turn");
     }
-    public static void musket(int type)
-    {
 
-    }
-    public static void swivel(int type)
-    {
 
-    }
 
 
 }

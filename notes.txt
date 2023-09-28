@@ -1,82 +1,35 @@
-Attack Variations:
-
-Broadside Cannons:
-
-DDOS Cannons
-Malware Cannons
-Logic Bomb Cannons
-
-Swivel Guns (Secondary Weapons):
-
-IP Tracker Swivel Gun
-Data Snare Swivel Gun
-
-
-
-
-
-
-
-
-Passive Ship Part Variations:
-
-
-Sails:
-
-VPN Sails
-Fiber Optic Sails
-Rigging (Movement Enhancements):
-
-Maneuverable Rigging
-Quick-Release Rigging
-
-
-
-
-Arrr, here be some suggestions for each of yer proposed ship attacks:
-
-**Broadside Cannons:**
-1. **DDOS Cannons (Powerful Attacks):** These be yer heavy hitters, unleashin' a digital storm on yer foes. They be slow to reload, so aim wisely and wait for the opportune moment to strike.
-
-2. **Malware Cannons (Tactical Disruption):** These cannons can disrupt enemy systems, makin' it harder for them to return fire or land hits. Perfect for outwittin' foes who rely on accuracy.
-
-3. **Logic Bomb Cannons (Tricky Maneuvers):** Logic bombs be confusin' and unpredictable. Use 'em to create chaos in battle, causin' confusion among the enemy crew. But be warned, they might backfire.
-
-**Sails:**
-1. **VPN Sails (Evading Trackers):** Hoist these sails when ye want to slip through the digital shadows. They'll help ye evade trackers and keep yer movements hidden.
-
-2. **Fiber Optic Sails (Speedy Getaways):** If speed be what ye need, these sails will give ye a burst of acceleration. Ideal for escapin' pursuit or catchin' up to prey.
-
-**Swivel Guns (Secondary Weapons):**
-1. **IP Tracker Swivel Gun (Tracking Foes):** These guns can lock onto enemy ships, trackin' their every move. Useful for keepin' an eye on slippery targets.
-
-2. **Data Snare Swivel Gun (Ensnaring Enemies):** Fire data snares to slow down and ensnare your enemies. They'll struggle to escape, leavin' 'em vulnerable to follow-up attacks.
-
-**Defensive Systems:**
-1. **Firewall Defense (Protection):** Raise yer firewall to shield the ship from incoming attacks. It'll reduce damage taken, keepin' yer ship afloat in tough battles.
-
-2. **Encryption Shield (Added Security):** This shield adds an extra layer of security to yer ship, protectin' it from status effects and debuffs that might be thrown yer way.
-
-**Rigging (Movement Enhancements):**
-1. **Maneuverable Rigging (Agility):** With these riggings, ye can perform swift maneuvers and outmaneuver yer foes. Ideal for pirates who prefer finesse over brute force.
-
-2. **Quick-Release Rigging (Speedy Escapes):** When the goin' gets tough, ye can release these riggings to make a hasty retreat. Perfect for avoidin' unfavorable engagements or cuttin' yer losses.
-
-
-
-
-
-ok so boat types?
-
+boat types
 
 Schooner - fastest ship, lowest firepower
 Frigate - balanced firepower and speed
 Galleon - superior firepower, lowest speed
 
 
+put all the methods in main (public void, not static void)
+use @Override
 
 
 
+Broadside Cannons
+- DDOS - High damage, low accuracy
+- DNS Leak - med damage, med accuracy
+- Zero Day Exploit - low damage, high accuracy
 
-put all the methods in main
+Swivel Gun
+- zip bomb - low damage + lower enemy accuracy
+- ip-trace - low damage + increase player accuracy
+- logic bomb - pure RNG damage
+
+
+Crew Abilities
+- Latency Musket Volley - medium damage, medium accuracy + lower enemy speed
+- Overclock Powder Kegs - double damage, half armor
+
+Sails
+- VPN Sails - more maneuverability, less speed
+- Fiber Optic Sails - flat speed buff
+
+Rigging
+- Anti-virus Rigging - more defense, less speed
+- Tune-up Utility Rigging - flat speed buff
 

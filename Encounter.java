@@ -41,7 +41,6 @@ public class Encounter {
                 System.out.println("There be no time to waste! Arrr, hoist the anchor! \n" +
                         "We'll be setting a course straight for The Pirate Bay, adventure awaits!\n");
                 Main.enterToContinue();
-                Storm.stormIntro();
                 break;
             default:
                 System.out.println("Yarrr! Ye didn't quite get the hang of it. \n" +

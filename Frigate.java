@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Frigate extends Ship{
 
     public Frigate()
@@ -5,21 +6,23 @@ public class Frigate extends Ship{
         super(350,250,7,5,200,6,100);
     }
 
-    public static int broadsideType;
-    public static int musketType;
-    public static int swivelType;
-    public static void customize()
+
+    @Override
+    public void customize()
     {
+        System.out.println("A frigate! Lookin' to minimize yer weaknesses, a fine choice, captain!");
         System.out.println("Arr, now let's take a look at yer ship...");
+        setBroadside(broadsideType);
+        setSwivel(swivelType);
+
     }
 
-    public static void broadside()
+    @Override
+    public void turn()
     {
-
+        System.out.println("turn");
     }
-    public static void musket(){
 
-    }
 
 
 }
