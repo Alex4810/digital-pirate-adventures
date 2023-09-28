@@ -62,4 +62,14 @@ Arrr, here be some suggestions for each of yer proposed ship attacks:
 
 2. **Quick-Release Rigging (Speedy Escapes):** When the goin' gets tough, ye can release these riggings to make a hasty retreat. Perfect for avoidin' unfavorable engagements or cuttin' yer losses.
 
-Remember, the key to success be in adaptin' yer ship's loadout to the challenges ye face. A wise pirate knows when to be bold and when to be cunning, adjustin' their arsenal accordingly. Good luck in yer high binary seas adventures!
+
+
+
+
+ok so boat types?
+
+
+Schooner - fastest ship, lowest firepower
+Frigate - balanced firepower and speed
+Galleon - superior firepower, lowest speed
+

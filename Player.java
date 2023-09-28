@@ -1,17 +1,9 @@
 import java.util.Scanner;
 public class Player {
+    public static Scanner scan = new Scanner(System.in);
 
     public static String playerName;
     public static String shipName;
-    public static Scanner scan = new Scanner(System.in);
-    public static int attack = 0;
-    public static int health = 100;
-    public static int defense = 20;
-    public static int dodge = 0;
-    public static int speed = 1;
-    public static int bandwidth = 50;
-
-
 
     public static int broadsideType = 0;
     /*
@@ -25,6 +17,7 @@ public class Player {
     2 = ip trace lockon - damage plus increase acc
     3 = logic bomb - RNG damage
      */
+
 
     public static void turn()
     {

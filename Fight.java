@@ -2,40 +2,18 @@ import java.util.Random;
 public class Fight {
     private static final Random roll = new Random();
 
-    public static boolean initiative()
+    public static boolean initiative(Ship player, Ship enemy)
     {
-        int playerInitiative = Player.speed + Main.d20();
-        int enemyInitiative = Enemy.speed + Main.d20();
+        int playerInitiative = player.speed + Main.d20();
+        int enemyInitiative = enemy.speed + Main.d20();
         return playerInitiative>=enemyInitiative;
     }
 
-    public static void turn(Player player, Enemy enemy)
+    public static void turn(Ship player, Enemy enemy)
     {
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     public static void intro()
