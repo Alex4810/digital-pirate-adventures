@@ -37,6 +37,12 @@ public class Fight {
         System.out.println("[fight is still being implemented, so the program just skips over it rn]");
         Encounter.pirateBayIntro();
     }
+    public static void initiate(Ship player, Ship enemy)
+    {
+            enemy.health = enemy.health/player.speed;
+            System.out.println("enemy health" + enemy.health);
+    }
+
 
 
 

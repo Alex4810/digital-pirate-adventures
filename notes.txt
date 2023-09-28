@@ -33,3 +33,16 @@ Rigging
 - Anti-virus Rigging - more defense, less speed
 - Tune-up Utility Rigging - flat speed buff
 
+
+
+Enemy attacks:
+IP Tracker Swivel Gun - damage + escape time
+Firewall Broadside - damage + escape time
+Data Snare Chainshot - damage - player dodge
+Proxy Buster Musket Volley - damage - player defense
+Ecryption Jammer Grapeshot - damage - player defense
+Codebreaker Broadside - damage - player accuracy
+
+
+
+

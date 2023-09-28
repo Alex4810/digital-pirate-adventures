@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static Ship player;
+    public static Ship enemy = new Enemy();
     private static final Random roll = new Random();
     public static final Scanner scan = new Scanner(System.in);
     public static void main(String[] args)
@@ -11,6 +12,8 @@ public class Main {
 
         intro();
         introPlayerResponse();
+        setUp();
+        Fight.initiate(player, enemy);
         Encounter.email();
         Storm.intro();
         Storm.lightning(player);
@@ -18,6 +21,8 @@ public class Main {
         Storm.eruption(player);
         Storm.wave(player);
         Storm.end();
+        Fight.intro();
+
 
         Encounter.pirateBayIntro();
         Encounter.pirateBay();
@@ -112,9 +117,7 @@ public class Main {
             case "y":
                 System.out.println("Aye, ye be ready for adventure!\n");
 
-                setUp();
 
-                Encounter.email();
                 break;
 
             case "n":
