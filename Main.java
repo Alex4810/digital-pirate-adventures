@@ -67,18 +67,15 @@ public class Main {
                             "2. Frigate - balanced speed n' firepower \n"+
                             " 3. Galleon - superior firepower, slowest speed");
         String input = scan.nextLine();
-        switch(input)
-        {
-            case "1":
-                return new Sloop();
-            case "2":
-                return new Frigate();
-            case "3":
-                return new Galleon();
-            default:
-                System.out.println("Arr, I didn't quite catch that. Input 1/2/3 for yer ship type!");
-                return askShipType();
-        }
+        return switch (input) {
+            case "1" -> new Sloop();
+            case "2" -> new Frigate();
+            case "3" -> new Galleon();
+            default -> {
+                System.out.println("Arr, I didn't quite catch that. Input 1/2/3 for yer ship type!\n");
+                yield askShipType();
+            }
+        };
     }
 
 
