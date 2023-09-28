@@ -73,3 +73,10 @@ Schooner - fastest ship, lowest firepower
 Frigate - balanced firepower and speed
 Galleon - superior firepower, lowest speed
 
+
+
+
+
+
+put all the methods in main
+

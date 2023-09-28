@@ -3,13 +3,14 @@ import java.util.Scanner;
 
 
 public class Main {
+    public static Ship player;
     private static final Random roll = new Random();
     public static final Scanner scan = new Scanner(System.in);
     public static void main(String[] args)
     {
 
         intro();
-        introPlayerResponse();
+        introPlayerResponse(player);
 
     }
     public static void intro()
@@ -27,12 +28,14 @@ public class Main {
         System.out.println("And what shall we name this trusty vessel that'll carry us through the binary seas, eh?");
         askShipName();
         System.out.println("Aye, no names be finer for sailin' the high binary seas!");
-        Ship playerShip = askShipType();
+        player = askShipType();
+        player.customize();
         System.out.println("Take " + Player.shipName + " full ahead, Captain " + Player.playerName +"!\n" +
                 "Adventure awaits, and the digital waves be callin' our name!\n");
         enterToContinue();
-
     }
+
+
 
     public static void askPlayerName()    {
         String input = scan.nextLine();
@@ -67,16 +70,18 @@ public class Main {
                             "2. Frigate - balanced speed n' firepower \n"+
                             " 3. Galleon - superior firepower, slowest speed");
         String input = scan.nextLine();
-        return switch (input) {
-            case "1" -> new Sloop();
-            case "2" -> new Frigate();
-            case "3" -> new Galleon();
-            default -> {
+        switch (input) {
+            case "1":
+                return new Sloop();
+            case "2":
+                return new Frigate();
+            case "3":
+                return new Galleon();
+            default:
                 System.out.println("Arr, I didn't quite catch that. Input 1/2/3 for yer ship type!\n");
-                yield askShipType();
+                return askShipType();
             }
         };
-    }
 
 
 
@@ -89,7 +94,7 @@ public class Main {
             Thread.currentThread().interrupt();
         }
     }
-    public static void introPlayerResponse()
+    public static void introPlayerResponse(Ship player)
     {
         Scanner scan = new Scanner(System.in);
         String response = scan.nextLine();
@@ -99,7 +104,7 @@ public class Main {
 
                 setUp();
 
-                Encounter.email();
+                Encounter.email(player);
                 break;
 
             case "n":
@@ -108,7 +113,7 @@ public class Main {
 
             default:
                 System.out.println("Arr, I didn't quite catch that. Try 'y' for yes or 'n' for no, matey!");
-                introPlayerResponse();
+                introPlayerResponse(player);
 
         }
     }
@@ -122,8 +127,8 @@ public class Main {
         scan.nextLine();
     }
 
-    public static void healthCheck()   {
-        if(Ship.health == 0)
+    public static void healthCheck(Ship player)   {
+        if(player.health == 0)
         {
             System.out.println("\n\nyou are dead.\n\n*RE4 Leon death sound*");
             System.exit(0);

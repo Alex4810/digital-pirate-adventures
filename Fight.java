@@ -11,6 +11,11 @@ public class Fight {
 
     public static void turn(Ship player, Enemy enemy)
     {
+        if(initiative(player, enemy))
+        {
+            player.turn();
+            enemy.turn();
+        }
 
 
     }
