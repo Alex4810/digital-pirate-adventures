@@ -10,7 +10,12 @@ public class Main {
     {
 
         intro();
-        introPlayerResponse(player);
+        introPlayerResponse();
+        Encounter.email();
+        Storm.stormIntro();
+
+        Encounter.pirateBayIntro();
+        Encounter.pirateBay();
 
     }
     public static void intro()
@@ -68,7 +73,7 @@ public class Main {
         System.out.println("What type of ship be " + Player.shipName + "? (1/2/3)" );
         System.out.println("1. Sloop - fastest speed, lowest firepower \n" +
                             "2. Frigate - balanced speed n' firepower \n"+
-                            " 3. Galleon - superior firepower, slowest speed");
+                            "3. Galleon - superior firepower, slowest speed");
         String input = scan.nextLine();
         switch (input) {
             case "1":
@@ -94,7 +99,7 @@ public class Main {
             Thread.currentThread().interrupt();
         }
     }
-    public static void introPlayerResponse(Ship player)
+    public static void introPlayerResponse()
     {
         Scanner scan = new Scanner(System.in);
         String response = scan.nextLine();
@@ -104,7 +109,7 @@ public class Main {
 
                 setUp();
 
-                Encounter.email(player);
+                Encounter.email();
                 break;
 
             case "n":
@@ -113,7 +118,7 @@ public class Main {
 
             default:
                 System.out.println("Arr, I didn't quite catch that. Try 'y' for yes or 'n' for no, matey!");
-                introPlayerResponse(player);
+                introPlayerResponse();
 
         }
     }

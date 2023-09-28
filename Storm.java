@@ -5,13 +5,12 @@ public class Storm {
     public static Scanner scan = new Scanner(System.in);
     public static Random roll = new Random();
 
-    public static void stormIntro(Ship player){
+    public static void stormIntro(){
         Main.clearScreen();
         System.out.println("Ye be sailin' onward, but a fearsome Bitstorm be upon us! \n\n" +
                 "We'll need to muster all our courage and wit to navigate this tempest, \n\n" +
                 "but I've no doubt we'll emerge triumphant on the other side, matey!\n");
         Main.enterToContinue();
-        stormLightning(player);
     }
 
     public static void stormLightning(Ship player){
@@ -29,13 +28,13 @@ public class Storm {
         switch (input)
         {
             case "1":
-                stormRoll(1, 1, player);
+
                 break;
             case "2":
-                stormRoll(1,2, player);
+
                 break;
             case "3":
-                stormRoll(1,3, player);
+
                 break;
             default:
                 System.out.println("Ye hesitated too long, and the storm's fury be takin' its toll. \n" +
@@ -61,13 +60,13 @@ public class Storm {
         switch (input)
         {
             case "1":
-                stormRoll(2, 1, player);
+
                 break;
             case "2":
-                stormRoll(2,2, player);
+
                 break;
             case "3":
-                stormRoll(2,3, player);
+
                 break;
             default:
                 System.out.println("Yer moment o' hesitation be costly, matey! \n" +
@@ -93,13 +92,13 @@ public class Storm {
         switch (input)
         {
             case "1":
-                stormRoll(3, 1, player);
+
                 break;
             case "2":
-                stormRoll(3,2, player);
+
                 break;
             case "3":
-                stormRoll(3,3, player);
+
                 break;
             default:
                 System.out.println("Ye waited too long, and the firewall's grip be upon us! \n" +
@@ -126,13 +125,13 @@ public class Storm {
         switch (input)
         {
             case "1":
-                stormRoll(4, 1, player);
+
                 break;
             case "2":
-                stormRoll(4,2, player);
+
                 break;
             case "3":
-                stormRoll(4,3, player);
+
                 break;
             default:
                 System.out.println("Ye hesitated, and the wave struck the ship! \n" +
@@ -154,58 +153,6 @@ public class Storm {
         Main.enterToContinue();
     }
 
-    public static void stormRoll(int type, int input, Ship player){
-        switch(type)    {
-            case 1:
-                int storm1 = roll.nextInt(3)+1;
-                if(input == storm1)  {
-                    System.out.println("Alas! The lightning strikes true, and we've taken damage, but our spirit be unbreakable! We press on, aye!\n");
-                    player.health --;
-                    Main.healthCheck(player);
-                }
-                else
-                {
-                    System.out.println("Our defenses held strong, and the lightning be naught but a spark! \n" +
-                            "Onward we sail, unharmed and undeterred!\n");
-                }
-                break;
-            case 2:
-                int storm2 = roll.nextInt(3)+1;
-                if(input == storm2)  {
-                    System.out.println("The data debris be strikin' the ship, causin' damage! \n" +
-                            "But we'll not let it break our spirit, and we press on with the wind in our sails!\n");
-                    player.health --;
-                    Main.healthCheck(player);
-                }
-                else
-                {
-                    System.out.println("We've maneuvered skillfully, avoidin' the whirlwind's wrath, and our journey continues, unscathed!\n");
-                }
-                break;
-            case 3:
-                int storm3 = roll.nextInt(3)+1;
-                if(input == storm3) {
-                    System.out.println("By Neptune's beard! The firewall's holdin' firm, and we must try again later. \n" +
-                            "Our ship stalls, burnin' precious bandwidth!\n");
-                    player.health --;
-                    Main.healthCheck(player);
-                }
-                else    {
-                    System.out.println("Aye, the ship slipped through unscathed, and we sail onward!\n");
-                }
-                break;
-            case 4:
-                int storm4 = roll.nextInt(3)+1;
-                if(input == storm4)  {
-                    System.out.println("The wave's wrath be upon us, and we've suffered packet loss! But our resolve be unshaken, and we sail on!\n");
-                    player.health --;
-                    Main.healthCheck(player);
-                }
-                else {
-                    System.out.println("Luck be smilin' upon us! We've nimbly avoided the wave, and our voyage continues with nary a packet lost!\n");
-                }
-                break;
-        }
-    }
+
 
 }
