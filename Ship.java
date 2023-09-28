@@ -115,7 +115,7 @@ public class Ship {
         }
     }
 
-    public static void setSails(int sails)
+    public static void setSails(int sails, int dodge, int speed)
     {
         System.out.println("Our ship's sails be the lifeblood o' our vessel. What kind o' sails be on yer ship? (1/2)\n");
         System.out.println("1. VPN Sails - Gives our ship extra maneuverability while sacrificin' some speed, navigatin' the waves with stealth.\n" +
@@ -126,19 +126,22 @@ public class Ship {
             case "1":
                 System.out.println("Our ship might be a little slower, but it be more nimble on the waves!\n");
                 sails = 1;
+                dodge = dodge + 2;
+                speed = speed - 2;
                 break;
             case "2":
                 System.out.println("Speed be our priority! We be wastin' no time on our adventure!\n");
                 sails = 2;
+                speed = speed + 2;
                 break;
             default:
                 System.out.println("Arr, I didn't quite catch that, matey. Input (1/2) to choose yer ship's sails.\n");
-                setSails(sailType);
+                setSails(sailType, dodge, speed);
         }
 
     }
 
-    public static void setRigging(int rigging)
+    public static void setRigging(int rigging, double armor, int speed)
     {
         System.out.println("Our ship not be complete without proper rigging. What kind o' rigging be on yer ship? (1/2)\n");
         System.out.println("1. Anti-virus Rigging - Fortify yer defenses, makin yer ship tougher while sacrificin' some speed\n" +
@@ -148,15 +151,18 @@ public class Ship {
         {
             case "1":
                 riggingType = 1;
+                armor = armor + 10;
+                speed = speed - 2;
                 System.out.println("Our defenses be top o' the line with this anti-virus!");
                 break;
             case "2":
                 riggingType = 2;
+                speed = speed + 2;
                 System.out.println("We be keepin' our ship running as fast as possible!");
                 break;
             default:
                 System.out.println("Arr, I didn't quite catch that, matey. Input (1/2) to choose yer ship's riggin'");
-                setRigging(riggingType);
+                setRigging(riggingType, armor, speed);
         }
     }
 

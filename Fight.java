@@ -39,7 +39,14 @@ public class Fight {
     }
     public static void initiate(Ship player, Ship enemy)
     {
-            enemy.health = enemy.health/player.speed;
+        if(player.speed <= 0)
+        {
+            enemy.health = 1000;
+        }
+        else {
+            enemy.health = 1000 / (player.speed / 2);
+        }
+
             System.out.println("enemy health" + enemy.health);
     }
 

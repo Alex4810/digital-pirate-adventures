@@ -2,7 +2,7 @@ public class Galleon extends Ship{
 
     public Galleon()
     {
-        super(500,200,4,3,30,4,150);
+        super(500,200,4,1,30,6,150);
     }
 
 
@@ -14,8 +14,8 @@ public class Galleon extends Ship{
         setBroadside(broadsideType);
         setSwivel(swivelType);
         setCrew(crewType);
-        setSails(sailType);
-        setRigging(riggingType);
+        setSails(sailType, dodge, speed);
+        setRigging(riggingType, armor, speed);
 
     }
 

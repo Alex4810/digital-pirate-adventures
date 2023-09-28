@@ -2,7 +2,7 @@ public class Frigate extends Ship{
 
     public Frigate()
     {
-        super(350,250,7,5,20,6,100);
+        super(350,250,7,3,20,3,100);
     }
 
 
@@ -13,8 +13,8 @@ public class Frigate extends Ship{
         System.out.println("Arr, now let's take a look at yer ship...");
         setBroadside(broadsideType);
         setSwivel(swivelType);
-        setSails(sailType);
-        setRigging(riggingType);
+        setSails(sailType, dodge, speed);
+        setRigging(riggingType, armor, speed);
 
     }
 
