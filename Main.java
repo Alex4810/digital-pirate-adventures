@@ -13,6 +13,15 @@ public class Main {
         intro();
         introPlayerResponse();
         setUp();
+        System.out.println(player.broadsideType);
+        System.out.println(player.health);
+        System.out.println(player.bandwidth);
+        System.out.println(player.speed);
+        System.out.println(player.dodge);
+        System.out.println(player.armor);
+        System.out.println(player.accuracy);
+        System.out.println(player.damage);
+        System.out.println(25 - (25*player.armor));
         Fight.initiate(player, enemy);
         Encounter.email();
         Storm.intro();
@@ -87,7 +96,7 @@ public class Main {
         String input = scan.nextLine();
         switch (input) {
             case "1":
-                return new Sloop();
+                return  new Sloop(200,100,10,4,0.10,0,50);
             case "2":
                 return new Frigate();
             case "3":

@@ -14,13 +14,6 @@ public class Ship {
 
     public Ship(int health, int bandwidth, int speed, int dodge, double armor, int accuracy, int damage)
     {
-        this.health = health;
-        this.bandwidth = bandwidth;
-        this.speed = speed;
-        this.dodge = dodge;
-        this.armor = armor;
-        this.accuracy = accuracy;
-        this.damage = damage;
     }
 
     public static int broadsideType;
@@ -40,7 +33,7 @@ public class Ship {
 
     }
 
-    public static void setBroadside(int broadside)
+    public static void setBroadside(int broadsideType)
     {
         System.out.println("Yer broadside cannons be yer main attack. What type of cannon be yer choice? (1/2/3)\n");
         System.out.println("1. DDOS Cannon - Devastatin' damage, but accuracy be lackin.\n" +
@@ -50,15 +43,15 @@ public class Ship {
         switch(input)
         {
             case "1":
-                broadside = 1;
+                broadsideType = 1;
                 System.out.println("I like the way ye think, matey. Our DDOS cannons will make quick work o' the enemy.\n");
                 break;
             case "2":
-                broadside = 2;
+                broadsideType = 2;
                 System.out.println("Keepin' everything balanced, I see. The best o' both worlds.\n");
                 break;
             case "3":
-                broadside = 3;
+                broadsideType = 3;
                 System.out.println("No room for surprises, eh? Sometimes reliability be a the best choice.\n");
                 break;
             default:
@@ -151,7 +144,7 @@ public class Ship {
         {
             case "1":
                 riggingType = 1;
-                armor = armor + 10;
+                armor += 0.1;
                 speed = speed - 2;
                 System.out.println("Our defenses be top o' the line with this anti-virus!");
                 break;

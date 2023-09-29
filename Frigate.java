@@ -2,8 +2,13 @@ public class Frigate extends Ship{
 
     public Frigate()
     {
-        super(350,250,7,3,20,3,100);
+        super(350,250,7,3,0.20,3,100);
     }
+
+    public int broadsideType = 0;
+    public int swivelType = 0;
+    public int sailType = 0;
+    public int riggingType = 0;
 
 
     @Override

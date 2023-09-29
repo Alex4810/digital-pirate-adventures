@@ -2,9 +2,14 @@ public class Galleon extends Ship{
 
     public Galleon()
     {
-        super(500,200,4,1,30,6,150);
+        super(500,200,4,1,0.30,6,150);
     }
 
+    public int broadsideType = 0;
+    public int swivelType = 0;
+    public int crewType = 0;
+    public int sailType = 0;
+    public int riggingType = 0;
 
     @Override
     public void customize()

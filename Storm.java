@@ -14,6 +14,7 @@ public class Storm {
     }
 
     public static void lightning(Ship player){
+        int score;
         System.out.println("The skies 'round ye turn as dark as a coder's soul. \n\n" +
                 "A taste of metal fills yer mouth, and the scent o' ozone stings yer nose. \n\n" +
                 "The ship's deck quivers as metal objects begin to vibrate.\n");
@@ -28,16 +29,40 @@ public class Storm {
         switch (input)
         {
             case "1":
-
+                score = Main.d20();
+                if (player.sailType == 1)
+                {
+                    score = score + 2;
+                }
+                if(score > 11)
+                {
+                    System.out.println("Our defenses held strong, and the lightning be naught but a spark! Onward we sail, unharmed and undeterred!");
+                }
+                else
+                {
+                    player.health -= roll.nextInt(25);
+                    System.out.println("Alas! The lightning strikes true, and we've taken damage, but our spirit be unbreakable! We press on, aye!");
+                }
                 break;
             case "2":
-
+                score = Main.d20() + (player.dodge/2);
+                if(score > 11)
+                {
+                    System.out.println("Aye, our ship be nimble as the tide and avoids the lightning! Onward we sail, unharmed and undeterred!");
+                }
+                else
+                {
+                    player.health -= roll.nextInt(25);
+                    System.out.println("Alas! The lightning strikes true, and we've taken damage, but our spirit be unbreakable! We press on, aye!");
+                }
                 break;
             case "3":
+                    double damage = roll.nextDouble();
+                    player.health -= (damage - damage*player.armor);
 
                 break;
             default:
-                player.health = player.health - roll.nextInt();
+                player.health -= roll.nextInt(25);
                 System.out.println("Ye hesitated too long, and the storm's fury be takin' its toll. \n" +
                         "Lightning strikes the ship, causin' damage! \n" +
                         "Act swiftly, lest the tempest consumes us!\n");
