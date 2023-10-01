@@ -1,9 +1,6 @@
 public class Sloop extends Ship{
 
-    public Sloop(int health, int bandwidth, int speed, int dodge, double armor, int accuracy, int damage)
-    {
 
-    }
     public int broadsideType = 0;
     public int sailType = 0;
 

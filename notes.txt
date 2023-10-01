@@ -10,7 +10,7 @@ use @Override
 
 
 
-Broadside Cannons
+Bro adside Cannons
 - DDOS - High damage, low accuracy
 - DNS Leak - med damage, med accuracy
 - Zero Day Exploit - low damage, high accuracy

@@ -2,32 +2,37 @@ import java.util.Scanner;
 public class Ship {
     public static Scanner scan = new Scanner(System.in);
 
-    public static int health;
-    public static int bandwidth;
-    public static int speed;
-    public static int dodge;
-    public static double armor;
-    public static int accuracy;
-    public static int damage;
+    protected int health;
+    protected int bandwidth;
+    protected int speed;
+    protected int dodge;
+    protected double armor;
+    protected int accuracy;
+    protected int damage;
+    protected int broadsideType;
+    protected int swivelType;
+    protected int crewType;
+    protected int sailType;
+    protected int riggingType;
 
 
-
-    public Ship(int health, int bandwidth, int speed, int dodge, double armor, int accuracy, int damage)
+    public Ship()
     {
     }
-
-    public static int broadsideType;
-    public static int swivelType;
-    public static int crewType;
-    public static int sailType;
-    public static int riggingType;
-
-
     public void turn()
     {
 
     }
-
+    public void create(int health, int bandwidth, int speed, int dodge, double armor, int accuracy, int damage)
+    {
+        this.health = health;
+        this.bandwidth = bandwidth;
+        this.speed = speed;
+        this.dodge = dodge;
+        this.armor = armor;
+        this.accuracy = accuracy;
+        this.damage = damage;
+    }
     public void customize()
     {
 
@@ -60,7 +65,7 @@ public class Ship {
         }
     }
 
-    public static void setSwivel(int swivel)
+    public static void setSwivel(int swivelType)
     {
         System.out.println("Yer swivel guns be a choice secondary gun. Smaller, but more precise. What be yer choice o' swivel? (1/2/3)\n");
         System.out.println("1. Zip Bomb Swivels - Load yer swivel guns with zip bombs to confuse yer enemy and lower their accuracy./n" +
@@ -70,15 +75,15 @@ public class Ship {
         switch(input)
         {
             case "1":
-                swivel = 1;
+                swivelType = 1;
                 System.out.println("Any enemy we be facin' will have a hard time hittin' us once they get a taste o' these guns!\n");
                 break;
             case "2":
-                swivel = 2;
+                swivelType = 2;
                 System.out.println("We'll maximize our ship's accuracy with these trusty guns!\n");
                 break;
             case "3":
-                swivel = 3;
+                swivelType = 3;
                 System.out.println("Hehehe. Leavin' it all to chance, I see. If it's chaos ye wanted, it's chaos ye got.\n");
                 break;
             default:
@@ -87,7 +92,7 @@ public class Ship {
         }
     }
 
-    public static void setCrew(int crew)
+    public static void setCrew(int crewType)
     {
         System.out.println("Our ship be havin' room for extra crew abilities. What be yer choice for em', matey? (1/2)\n");
         System.out.println("1. Latency Musket Volley - Rally yer crew to fire a musket volley at yer enemy, dealin' damage and disruptin' their systems." +
@@ -97,18 +102,18 @@ public class Ship {
         {
             case "1":
                 System.out.println("A solid choice, matey! we'll be sowin' chaos among the enemy with this crew maneuver!\n");
-                crew = 1;
+                crewType = 1;
                 break;
             case "2":
                 System.out.println("We won't be needin' defense if we blow our enemies out o' the water before they hit us!\n");
-                crew = 2;
+                crewType = 2;
                 break;
             default:
                 System.out.println("Arr, I didn't quite catch that, matey. Input (1/2) to choose yer crew ability.\n");
         }
     }
 
-    public static void setSails(int sails, int dodge, int speed)
+    public static void setSails(int sailType, int dodge, int speed)
     {
         System.out.println("Our ship's sails be the lifeblood o' our vessel. What kind o' sails be on yer ship? (1/2)\n");
         System.out.println("1. VPN Sails - Gives our ship extra maneuverability while sacrificin' some speed, navigatin' the waves with stealth.\n" +
@@ -118,13 +123,13 @@ public class Ship {
         {
             case "1":
                 System.out.println("Our ship might be a little slower, but it be more nimble on the waves!\n");
-                sails = 1;
+                sailType = 1;
                 dodge = dodge + 2;
                 speed = speed - 2;
                 break;
             case "2":
                 System.out.println("Speed be our priority! We be wastin' no time on our adventure!\n");
-                sails = 2;
+                sailType = 2;
                 speed = speed + 2;
                 break;
             default:
@@ -134,7 +139,7 @@ public class Ship {
 
     }
 
-    public static void setRigging(int rigging, double armor, int speed)
+    public static void setRigging(int riggingType, double armor, int speed)
     {
         System.out.println("Our ship not be complete without proper rigging. What kind o' rigging be on yer ship? (1/2)\n");
         System.out.println("1. Anti-virus Rigging - Fortify yer defenses, makin yer ship tougher while sacrificin' some speed\n" +
