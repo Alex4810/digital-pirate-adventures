@@ -2,7 +2,7 @@ import java.util.Random;
 public class Fight {
     private static final Random roll = new Random();
 
-    public static boolean initiative(Ship player, Ship enemy)
+    public static boolean initiative(Ship player, Enemy enemy)
     {
         int playerInitiative = player.speed + Main.d20();
         int enemyInitiative = enemy.speed + Main.d20();
@@ -37,7 +37,7 @@ public class Fight {
         System.out.println("[fight is still being implemented, so the program just skips over it rn]");
         Encounter.pirateBayIntro();
     }
-    public static void initiate(Ship player, Ship enemy)
+    public static void initiate(Ship player, Enemy enemy)
     {
         if(player.speed <= 0)
         {

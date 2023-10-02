@@ -1,16 +1,13 @@
 import java.util.Random;
-public class Enemy extends Ship{
+public class Enemy{
+    public int speed = 0;
+    public int health;
+    public void turn()
+    {}
 
-    public Enemy() {
-        super(1000, 1000, 3, 2, 0.50,8,150);
+
     }
 
-
-
-
-
-
-}
 
 
 

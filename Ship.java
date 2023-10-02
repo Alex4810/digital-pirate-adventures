@@ -2,37 +2,87 @@ import java.util.Scanner;
 public class Ship {
     public static Scanner scan = new Scanner(System.in);
 
-    protected int health;
-    protected int bandwidth;
-    protected int speed;
-    protected int dodge;
-    protected double armor;
-    protected int accuracy;
-    protected int damage;
-    protected int broadsideType;
-    protected int swivelType;
-    protected int crewType;
-    protected int sailType;
-    protected int riggingType;
+    public static String playerName;
+    public static String shipName;
+
+    public static shipType shipType;
+    public boolean swivel;
+    public boolean crew;
+    public int health;
+    public int bandwidth;
+    public int speed;
+    public int dodge;
+    public double armor;
+    public int accuracy;
+    public double damage;
+    public int broadsideType;
+    public int swivelType;
+    public int crewType;
+    public int sailType;
+    public int riggingType;
 
 
-    public Ship()
-    {
-    }
-    public void turn()
-    {
-
-    }
-    public void create(int health, int bandwidth, int speed, int dodge, double armor, int accuracy, int damage)
-    {
+    public Ship(shipType type, int health, int bandwidth, int speed, int dodge, double armor, int accuracy, double damage, int broadsideType, int swivelType, int crewType, int sailType, int riggingType, boolean swivel, boolean crew) {
+        this.shipType = type;
         this.health = health;
         this.bandwidth = bandwidth;
         this.speed = speed;
         this.dodge = dodge;
         this.armor = armor;
-        this.accuracy = accuracy;
+        this. accuracy = accuracy;
         this.damage = damage;
+        this.broadsideType = broadsideType;
+        this.swivelType = swivelType;
+        this.crewType = crewType;
+        this.sailType = sailType;
+        this.riggingType = riggingType;
+        this.swivel = swivel;
+        this.crew = crew;
+        initialize(type);
     }
+    public static enum shipType
+    {
+        SLOOP, FRIGATE, GALLEON, NONE
+    }
+    private void initialize(shipType type) {
+        switch (type) {
+            case SLOOP:
+                this.health = 200;
+                this.bandwidth = 100;
+                this. speed = 10;
+                this. dodge = 4;
+                this.armor = 0.10;
+                this.accuracy = 0;
+                this.damage = 0.75;
+                this.swivel = false;
+                this.crew = false;
+                break;
+            case FRIGATE:
+                this.health = 350;
+                this.bandwidth = 150;
+                this. speed = 7;
+                this. dodge = 3;
+                this.armor = 0.20;
+                this.accuracy = 3;
+                this.damage = 1;
+                this.swivel = true;
+                this.crew = false;
+                break;
+            case GALLEON:
+                this.health = 500;
+                this.bandwidth = 200;
+                this. speed = 4;
+                this. dodge = 1;
+                this.armor = 0.30;
+                this.accuracy = 6;
+                this.damage = 1.25;
+                this.swivel = true;
+                this.crew =true;
+                break;
+
+        }
+    }
+
     public void customize()
     {
 
@@ -165,6 +215,10 @@ public class Ship {
     }
 
 
+    public void turn()
+    {
+
+    }
 
 
 
