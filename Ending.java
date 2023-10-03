@@ -76,7 +76,7 @@ public class Ending {
     public static void endingEnd()
     {
         Main.enterToContinue();
-        System.out.println("\nThis be the outcomes of yer adventures as " + Main.player.playerName +", Captain of " + Main.player.shipName +"!\n");
+        System.out.println("\nThis be the outcomes of yer adventures as " + Ship.playerName +", Captain of " + Ship.shipName +"!\n");
 
         System.out.println("Yer choices have shaped the course of yer digital piracy tale, and yer legacy be etched into the annals of the binary seas!");
 
