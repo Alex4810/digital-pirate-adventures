@@ -12,10 +12,14 @@ public class Main {
 
             intro();
             introPlayerResponse();
-
+            setup();
             Ship player = askShipType();
             player.customize();
+            embark();
+
             System.out.println(player.broadsideType);
+            System.out.println(player.swivelType);
+            System.out.println(player.crewType);
             System.out.println(player.health);
             System.out.println(player.bandwidth);
             System.out.println(player.speed);
@@ -61,6 +65,14 @@ public class Main {
                     introPlayerResponse();
             }
         }
+        public static void setup()
+        {
+            System.out.println("Ahoy! Before we set sail, what be yer name, matey?");
+            Ship.playerName = scan.nextLine();
+            System.out.println("And what be the name of our ship?");
+            Ship.shipName = scan.nextLine();
+            System.out.println("No finer names for the high seas, indeed!");
+        }
 
         public static Ship askShipType()
         {
@@ -83,6 +95,20 @@ public class Main {
             }
 
         }
+        public static void embark()
+        {
+            System.out.println("Take " + Ship.shipName + " ahead full, Captain " + Ship.playerName + "! \n" +
+                    "The high Binary Seas await!");
+            enterToContinue();
+        }
+
+
+
+
+
+
+
+
 
 
 

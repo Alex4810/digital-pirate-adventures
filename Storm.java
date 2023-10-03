@@ -32,7 +32,7 @@ public class Storm {
                 score = Main.d20();
                 if (player.sailType == 1)
                 {
-                    score = score + 2;
+                    score = score + 5;
                 }
                 if(score > 11)
                 {
@@ -40,7 +40,7 @@ public class Storm {
                 }
                 else
                 {
-                    player.health -= roll.nextInt(25);
+                    player.takeDamage(roll.nextInt(25));
                     System.out.println("Alas! The lightning strikes true, and we've taken damage, but our spirit be unbreakable! We press on, aye!");
                 }
                 break;
@@ -52,17 +52,17 @@ public class Storm {
                 }
                 else
                 {
-                    player.health -= roll.nextInt(25);
+                    player.takeDamage(roll.nextInt(25));
                     System.out.println("Alas! The lightning strikes true, and we've taken damage, but our spirit be unbreakable! We press on, aye!");
                 }
                 break;
             case "3":
                     double damage = roll.nextDouble();
-                    player.health -= (damage - damage*player.armor);
+                    player.takeDamage((int) (damage - damage*(player.armor*2)));
 
                 break;
             default:
-                player.health -= roll.nextInt(25);
+                player.takeDamage(roll.nextInt(25));
                 System.out.println("Ye hesitated too long, and the storm's fury be takin' its toll. \n" +
                         "Lightning strikes the ship, causin' damage! \n" +
                         "Act swiftly, lest the tempest consumes us!\n");
@@ -70,6 +70,8 @@ public class Storm {
         }
         Main.enterToContinue();
     }
+
+
     public static void whirlwind(Ship player){
         Main.clearScreen();
         System.out.println("The lightning strike be but a memory, and they say lightning don't strike the same spot twice. \n" +
@@ -81,11 +83,20 @@ public class Storm {
                 "2. Steady as she goes, we'll navigate with caution through the whirlwind, takin' it slow but riskin' delays.\n" +
                 "3. Put our brains to work and analyze the data patterns within the whirlwind for a potential shortcut.\n");
 
+        int score;
         String input = scan.nextLine();
         switch (input)
         {
             case "1":
-
+                score = Main.d20();
+                if(player.swivel)
+                {
+                    score += 5;
+                }
+                if(score > 12)
+                {
+                    System.out.println("");
+                }
                 break;
             case "2":
 

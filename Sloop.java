@@ -13,6 +13,7 @@ public class Sloop extends Ship{
         setBroadside(broadsideType);
         setSails(sailType,dodge,speed);
         setRigging(riggingType,armor,speed);
+        this.swivel = false;
 
     }
 

@@ -17,6 +17,7 @@ public class Ship {
     public int crewType = 0;
     public int sailType = 0;
     public int riggingType = 0;
+    public boolean swivel = true;
 
 
     public Ship(int health, int bandwidth, int speed, int dodge, double armor, int accuracy, double damage) {
@@ -34,7 +35,7 @@ public class Ship {
         System.out.println("Yer broadside cannons be yer main attack. What type of cannon be yer choice? (1/2/3)\n");
         System.out.println("1. DDOS Cannon - Devastatin' damage, but accuracy be lackin.\n" +
                 "2. DNS Leak Launchers - Medium damage n' accuracy; a safe choice\n" +
-                "3. Zero Day Exploit Guns - They be strikin' true with high accuracy, but lower damage.");
+                "3. Zero Day Exploit Guns - They be strikin' true with high accuracy, but lower damage.\n");
         String input = scan.nextLine();
         switch(input)
         {
@@ -59,9 +60,9 @@ public class Ship {
     public void setSwivel(int swivelType)
     {
         System.out.println("Yer swivel guns be a choice secondary gun. Smaller, but more precise. What be yer choice o' swivel? (1/2/3)\n");
-        System.out.println("1. Zip Bomb Swivels - Load yer swivel guns with zip bombs to confuse yer enemy and lower their accuracy./n" +
-                            "2. IP-Trace Swivels - Load em' with shots that trace yer enemies' digital footprints, boostin' yer accuracy." +
-                            "3. Logic Bomb Swivels - Throw yer caution to the sea, unleashing pure RNG chaos and causin' unpredictable damage with every shot!");
+        System.out.println("1. Zip Bomb Swivels - Load yer swivel guns with zip bombs to confuse yer enemy and lower their accuracy./n\n" +
+                            "2. IP-Trace Swivels - Load em' with shots that trace yer enemies' digital footprints, boostin' yer accuracy.\n" +
+                            "3. Logic Bomb Swivels - Throw yer caution to the sea, unleashing pure RNG chaos and causin' unpredictable damage with every shot!\n");
         String input = scan.nextLine();
         switch(input)
         {
@@ -86,8 +87,8 @@ public class Ship {
     public void setCrew(int crewType)
     {
         System.out.println("Our ship be havin' room for extra crew abilities. What be yer choice for em', matey? (1/2)\n");
-        System.out.println("1. Latency Musket Volley - Rally yer crew to fire a musket volley at yer enemy, dealin' damage and disruptin' their systems." +
-                            "2. Overclock Powder Kegs - Push yer crew to the limit, increasin' yer damage while sacrificin' some o' yer armor.");
+        System.out.println("1. Latency Musket Volley - Rally yer crew to fire a musket volley at yer enemy, dealin' damage and disruptin' their systems.\n" +
+                            "2. Overclock Powder Kegs - Push yer crew to the limit, increasin' yer damage while sacrificin' some o' yer armor.\n");
         String input = scan.nextLine();
         switch(input)
         {
@@ -101,6 +102,7 @@ public class Ship {
                 break;
             default:
                 System.out.println("Arr, I didn't quite catch that, matey. Input (1/2) to choose yer crew ability.\n");
+                setCrew(crewType);
         }
     }
 
@@ -108,7 +110,7 @@ public class Ship {
     {
         System.out.println("Our ship's sails be the lifeblood o' our vessel. What kind o' sails be on yer ship? (1/2)\n");
         System.out.println("1. VPN Sails - Gives our ship extra maneuverability while sacrificin' some speed, navigatin' the waves with stealth.\n" +
-                "2. Fiber Optic Sails - Harness the speed of fiber optics, lettin' yer ship race through the waters");
+                "2. Fiber Optic Sails - Harness the speed of fiber optics, lettin' yer ship race through the waters\n");
         String input = scan.nextLine();
         switch(input)
         {
@@ -134,7 +136,7 @@ public class Ship {
     {
         System.out.println("Our ship not be complete without proper rigging. What kind o' rigging be on yer ship? (1/2)\n");
         System.out.println("1. Anti-virus Rigging - Fortify yer defenses, makin yer ship tougher while sacrificin' some speed\n" +
-                "2. Tune-up Utility Rigging - Keep yer ship in top condition, allowing it to perform at its maximum speed.");
+                "2. Tune-up Utility Rigging - Keep yer ship in top condition, allowing it to perform at its maximum speed.\n");
         String input = scan.nextLine();
         switch(input)
         {
@@ -142,15 +144,15 @@ public class Ship {
                 this.riggingType = 1;
                 this.armor += 0.1;
                 this.speed = speed - 2;
-                System.out.println("Our defenses be top o' the line with this anti-virus!");
+                System.out.println("Our defenses be top o' the line with this anti-virus!\n");
                 break;
             case "2":
                 this.riggingType = 2;
                 this.speed = speed + 2;
-                System.out.println("We be keepin' our ship running as fast as possible!");
+                System.out.println("We be keepin' our ship running as fast as possible!\n");
                 break;
             default:
-                System.out.println("Arr, I didn't quite catch that, matey. Input (1/2) to choose yer ship's riggin'");
+                System.out.println("Arr, I didn't quite catch that, matey. Input (1/2) to choose yer ship's riggin'\n");
                 setRigging(riggingType, armor, speed);
         }
     }
