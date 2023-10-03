@@ -1,8 +1,8 @@
 public class Galleon extends Ship{
 
-    public Galleon(int health, int bandwidth, int speed, int dodge, double armor,  int accuracy, double damage, int broadsideType, int swivelType, int crewType, int sailType, int riggingType)
+    public Galleon(int health, int bandwidth, int speed, int dodge, double armor,  int accuracy, double damage)
     {
-        super(500,200,4,1,0.30,6,1.25,0,0,0,0,0);
+        super(500,200,4,1,0.30,6,1.25);
     }
 
     public int broadsideType = 0;

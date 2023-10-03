@@ -1,8 +1,8 @@
 public class Frigate extends Ship{
 
-    public Frigate(int health, int bandwidth, int speed, int dodge, double armor, int accuracy, double damage, int broadsideType, int crewType, int sailType, int riggingType)
+    public Frigate(int health, int bandwidth, int speed, int dodge, double armor, int accuracy, double damage)
     {
-        super(350,250,7,3,0.20,3,1,0,0,0,0,0);
+        super(350,250,7,3,0.20,3,1);
     }
 
     public int broadsideType = 0;

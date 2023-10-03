@@ -19,8 +19,14 @@ public class Ship {
     public int riggingType = 0;
 
 
-    public Ship(int health, int bandwidth, int speed, int dodge, double armor, int accuracy, double damage, int broadsideType, int swivelType, int crewType, int sailType, int riggingType) {
-
+    public Ship(int health, int bandwidth, int speed, int dodge, double armor, int accuracy, double damage) {
+        this.health = health;
+        this.bandwidth = bandwidth;
+        this.speed = speed;
+        this.dodge = dodge;
+        this.armor = armor;
+        this.accuracy = accuracy;
+        this.damage = damage;
     }
 
     public void setBroadside(int broadsideType)
@@ -153,8 +159,31 @@ public class Ship {
 
     }
 
+    public void takeDamage(int damage)
+    {
+        this.health -= damage;
+    }
+    public void useBandwidth(int burn)
+    {
+        this.bandwidth -= burn;
+    }
+    public void nerfAccuracy(int nerf)
+    {
+        this.accuracy -= nerf;
+    }
+    public void nerfDodge(int nerf)
+    {
+        this.dodge -= nerf;
+    }
+    public void nerfArmor(double nerf)
+    {
+        this.armor -= nerf;
+    }
+
+
     public void turn()
     {
 
     }
+
 }

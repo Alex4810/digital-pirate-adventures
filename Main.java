@@ -3,15 +3,18 @@ import java.util.Scanner;
 
 
 public class Main {
-        public static Ship player = askShipType();
-        public static Enemy enemy = new Enemy();
         private static final Random roll = new Random();
         public static final Scanner scan = new Scanner(System.in);
 
         public static void main(String[] args) {
 
+            Enemy enemy = new Enemy();
+
             intro();
             introPlayerResponse();
+
+            Ship player = askShipType();
+            player.customize();
             System.out.println(player.broadsideType);
             System.out.println(player.health);
             System.out.println(player.bandwidth);
@@ -38,13 +41,10 @@ public class Main {
         }
 
         public static void intro() {
-            System.out.println("""
-
-                    Ahoy there fellow digital pirate!
-                    Welcome aboard yer trust ship and prepare to sail the internet seas!
-                    I be yer trusty virtual quartermaster.
-
-                    Ready to embark on this digital adventure? (y/n)""");
+            System.out.println("Ahoy there fellow digital pirate!\n"
+                    +"Welcome aboard yer trust ship and prepare to sail the internet seas!\n"
+                    +"I be yer trusty virtual quartermaster.\n"
+                    +"Ready to embark on this digital adventure? (y/n)");
         }
         public static void introPlayerResponse() {
             Scanner scan = new Scanner(System.in);
@@ -61,22 +61,22 @@ public class Main {
                     introPlayerResponse();
             }
         }
+
         public static Ship askShipType()
         {
-            System.out.println("""
-                              What be the type o' yer ship, matey? (1/2/3)
-                              1. Sloop - fastest speed, lowest firepower
-                              2. Frigate - balanced speed n' firepower
-                              3. Galleon - superior firepower, slowest speed""");
+            System.out.println("What be the type o' yer ship, matey? (1/2/3)\n"
+                              +"1. Sloop - fastest speed, lowest firepower\n"
+                              +"2. Frigate - balanced speed n' firepower\n"
+                              +"3. Galleon - superior firepower, slowest speed");
             String input = scan.nextLine();
             switch(input)
             {
                 case "1":
-                    return new Sloop(200, 100, 10, 7, 0.1, 0, 0.75, 0, 0, 0, 0, 0);
+                    return new Sloop(200, 100, 10, 7, 0.1, 0, 0.75);
                 case "2":
-                    return new Frigate(350,250,7,3,0.20,3,100,0,0,0,0);
+                    return new Frigate(350,250,7,3,0.20,3,100);
                 case "3":
-                    return new Galleon(500,200,4,1,0.30,6,1.25,0,0,0,0,0);
+                    return new Galleon(500,200,4,1,0.30,6,1.25);
                 default:
                     System.out.println("Arr, I didn't quite catch that. Input 1/2/3, to choose yer ship type, matey.");
                     return askShipType();
