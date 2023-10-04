@@ -43,7 +43,7 @@ public class Ship {
         {
             case "1":
                 this.broadsideType = 1;
-                System.out.println("I like the way ye think, matey. Our DDOS cannons will make quick work o' the enemy.\n");
+                System.out.println("They may not be the most accurate, but our DDOS cannons will make quick work o' the enemy.\n");
                 break;
             case "2":
                 this.broadsideType = 2;
@@ -61,7 +61,7 @@ public class Ship {
 
     public void setSwivel(int swivelType)
     {
-        System.out.println("Yer swivel guns be a choice secondary gun. Smaller, but more precise. What be yer choice o' swivel? (1/2/3)\n");
+        System.out.println("Yer swivel guns be a fine secondary gun. Smaller, but more precise. What be yer choice o' swivel? (1/2/3)\n");
         System.out.println("""
                 1. Zip Bomb Swivels - Load yer swivel guns with zip bombs to confuse yer enemy and lower their accuracy./n
                 2. IP-Trace Swivels - Load em' with shots that trace yer enemies' digital footprints, boostin' yer accuracy.

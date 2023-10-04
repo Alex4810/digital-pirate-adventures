@@ -35,7 +35,7 @@ public class Fight {
                 +"Stand ready, me hearties, for the clash of digital swords and bytes draws nigh!");
 
         System.out.println("[fight is still being implemented, so the program just skips over it rn]");
-        Encounter.pirateBayIntro();
+        Main.enterToContinue();
     }
     public static void initiate(Ship player, Enemy enemy)
     {

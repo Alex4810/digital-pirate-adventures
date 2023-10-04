@@ -69,6 +69,7 @@ public class Storm {
             case "3":
                     double damage = roll.nextDouble();
                     player.takeDamage((int) (damage - damage*(player.armor*2)));
+                    System.out.println("Alas! The lightning strikes true, and we've taken damage! Fortunately, we've braced for our ship for the impact and most of it be negated!");
 
                 break;
             default:

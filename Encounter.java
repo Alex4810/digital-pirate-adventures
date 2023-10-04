@@ -88,24 +88,26 @@ public class Encounter {
 
     public static void pirateBayIntro()
     {
-        Main.enterToContinue();
         Main.clearScreen();
-        System.out.println("Af'er a harrowing journey through the turbulent seas o' the digital realm, yer vessel finally drops anchor at The Pirate Bay. \n" +
-                "This fabled sanctuary fer buccaneers, nestled deep within the binary tides, teems with activity.\n");
+        System.out.println("""
+                Af'er a harrowing journey through the turbulent seas o' the digital realm, yer vessel finally drops anchor at The Pirate Bay.\s
+                This fabled sanctuary fer buccaneers, nestled deep within the binary tides, teems with activity.
 
-                System.out.println("\nAs ye make landfall, the sights an' sounds o' fellow pirates from all corners o' the digital world surround ye. \n" +
-                "Flags adorned with the symbols o' diverse factions dance in the cyber breezes, while the buzz o' anticipation fills the air.\n");
+                As ye make landfall, the sights an' sounds o' fellow pirates from all corners o' the digital world surround ye.\s
+                Flags adorned with the symbols o' diverse factions dance in the cyber breezes, while the buzz o' anticipation fills the air.
 
-        System.out.println("\nSettin' foot upon The Pirate Bay's digital shores, ye can't help but ponder the choices awaitin' ye. \n" +
-                "The pursuit o' that new game torrent might've led ye here, but the possibilities stretch as far as the digital horizon.\n");
+                Settin' foot upon The Pirate Bay's digital shores, ye can't help but ponder the choices awaitin' ye.\s
+                The pursuit o' that new game torrent might've led ye here, but the possibilities stretch as far as the digital horizon.
 
-        System.out.println("\nWelcome to The Pirate Bay, where legends of the high binary seas come to life!\n");
+                Welcome to The Pirate Bay, where legends of the high binary seas come to life!
+                """);
         Main.enterToContinue();
 
     }
 
     public static void pirateBay()
     {
+        Main.clearScreen();
         if(library)
         {
             if(textbook)

@@ -16,19 +16,6 @@ public class Main {
             Ship player = askShipType();
             player.customize();
             embark();
-
-            System.out.println(player.broadsideType);
-            System.out.println(player.swivelType);
-            System.out.println(player.crewType);
-            System.out.println(player.health);
-            System.out.println(player.bandwidth);
-            System.out.println(player.speed);
-            System.out.println(player.dodge);
-            System.out.println(player.armor);
-            System.out.println(player.accuracy);
-            System.out.println(player.damage);
-            System.out.println(25 - (25 * player.armor));
-            Fight.initiate(player, enemy);
             Encounter.email();
             Storm.intro();
             Storm.lightning(player);
@@ -69,6 +56,7 @@ public class Main {
         public static void setup()
         {
             askPlayerName();
+            askShipName();
             System.out.println("No finer names for the high seas, indeed!");
         }
 
@@ -120,7 +108,7 @@ public class Main {
         public static void embark()
         {
             System.out.println("Take " + Ship.shipName + " ahead full, Captain " + Ship.playerName + "! \n" +
-                    "The high Binary Seas await!");
+                    "The high binary seas await!");
             enterToContinue();
         }
 
