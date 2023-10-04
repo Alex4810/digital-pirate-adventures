@@ -146,13 +146,7 @@ public class Main {
             scan.nextLine();
         }
 
-        public static void healthCheck(Ship player) {
-            if (player.health == 0) {
-                System.out.println("\n\nYou are dead.\n\n*RE4 Leon death sound*");
-                System.exit(0);
 
-            }
-        }
 
         public static int d20() {
             return roll.nextInt(20) + 1;

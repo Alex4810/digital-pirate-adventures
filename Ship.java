@@ -198,4 +198,20 @@ public class Ship {
 
     }
 
+    public void healthCheck() {
+        if (health == 0) {
+            System.out.println("\n\nYou are dead.\n\n*RE4 Leon death sound*");
+            System.exit(0);
+
+        }
+    }
+
+    public void bandwidthCheck()    {
+        if(bandwidth == 0)
+        {
+            System.out.println("We've stretched our bandwidth thin! Our ship be takin' damage!");
+            takeDamage(Main.d20());
+        }
+    }
+
 }
