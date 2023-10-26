@@ -4,7 +4,7 @@ Welcome to **Digital Pirate Adventures**, a thrilling text-based game that takes
 
 **Notice**: The latest commit in this branch contains experimental changes and unfinished content. I'm working hard to improve the game and thank you for your patience.
 
-If you'd like to try out the latest features and provide feedback, feel free to continue with this version. However, please be aware that it may not be as polished as the stable release.
+If you'd like to try out the latest features and provide feedback, feel free to continue with this version. However, please be aware that while I've done the best I can to ensure there aren't any errors, there is missing content. 
 
 Thank you for your understanding and support!
 
